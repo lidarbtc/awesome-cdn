@@ -22,7 +22,7 @@ This is a list of CDN with a detailed description of each one.
 
 - CDN must have POPs in at least two countries to qualify for this list.
 
-### ['Cloudflare'](https://www.cloudflare.com/)
+### [Cloudflare](https://www.cloudflare.com/)
 
 - Description
   - They provide a cdn, dns with a free plan.
@@ -46,7 +46,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Only for enterprise plan.
 
-### ['Gcore'](https://gcore.com/)
+### [Gcore](https://gcore.com/)
 
 - Description
   - They provide a cdn, dns with a free plan.
@@ -69,7 +69,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes, for all plan.
 
-### ['BunnyCDN'](https://bunnycdn.com/)
+### [BunnyCDN](https://bunnycdn.com/)
 
 - Description
   - They provide a cdn, dns with a free trial.
@@ -93,7 +93,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['Akamai](https://www.akamai.com/)
+### [Akamai](https://www.akamai.com/)
 
 - Description
   - Most biggest CDN provider.
@@ -108,7 +108,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['CDN77'](https://www.cdn77.com/)
+### [CDN77](https://www.cdn77.com/)
 
 - Description
   - Parent company of datapacket.com
@@ -127,7 +127,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['CloudFront(AWS)'](https://aws.amazon.com/cloudfront/)
+### [CloudFront(AWS)](https://aws.amazon.com/cloudfront/)
 
 - Description
   - AWS, Expensive
@@ -141,7 +141,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['StackPath'](https://www.stackpath.com/)
+### [StackPath](https://www.stackpath.com/)
 
 - Description
   - Focus on ddos protection.
@@ -159,7 +159,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['Fastly'](https://www.fastly.com/)
+### [Fastly](https://www.fastly.com/)
 
 - Description
   - Pricing is insanely expensive.
@@ -175,7 +175,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['CacheFly'](https://www.cachefly.com/)
+### [CacheFly](https://www.cachefly.com/)
 
 - Description
   - 5TB/m traffic with always free plan!
@@ -203,7 +203,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['Imperva'](https://www.imperva.com/)
+### [Imperva](https://www.imperva.com/)
 
 - Description
   - Focus on ddos protection.
@@ -219,7 +219,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - If you know, please send a pull request.
 
-### ['Edgio'](https://edg.io/)
+### [Edgio](https://edg.io/)
 
 - Description
   - Formerly Limelight Networks
@@ -233,7 +233,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['LumenCDN'](https://www.lumen.com/en-us/edge-cloud/cdn.html)
+### [LumenCDN](https://www.lumen.com/en-us/edge-cloud/cdn.html)
 
 - Description
   - As the name suggests, it is a CDN provided by tier 1 ISP Lumen.
@@ -247,7 +247,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['CDNetworks'](https://www.cdnetworks.com/)
+### [CDNetworks](https://www.cdnetworks.com/)
 
 - Description
   - CDN focused on Asia (specifically China).
@@ -261,7 +261,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['KeyCDN'](https://www.keycdn.com/)
+### [KeyCDN](https://www.keycdn.com/)
 
 - Description
   - Made in Switzerland(?)
@@ -275,7 +275,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['BelugaCDN'](https://www.belugacdn.com/)
+### [BelugaCDN](https://www.belugacdn.com/)
 
 - Description
   - Cheap
@@ -289,7 +289,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['DDOS-Guard'](https://ddos-guard.net/en)
+### [DDOS-Guard](https://ddos-guard.net/en)
 
 - Description
   - Aka "bulletproof CDN"
@@ -304,7 +304,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - If you know, please send a pull request.
 
-### ['BlzingCDN'](https://blazingcdn.com/)
+### [BlzingCDN](https://blazingcdn.com/)
 
 - Description
   - Cheapest player
@@ -320,7 +320,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - Yes
 
-### ['FDCservers'](https://www.fdcservers.net/cdn)
+### [FDCservers](https://www.fdcservers.net/cdn)
 
 - Description
   - Also cheapest player
