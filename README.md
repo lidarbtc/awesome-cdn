@@ -156,7 +156,7 @@ This is a list of CDN with a detailed description of each one.
   - Yes
 - Pricing
   - It's complicated, visit pricing page for more.
-  - ['Pricing page'](https://aws.amazon.com/cloudfront/pricing/)
+  - [Pricing page](https://aws.amazon.com/cloudfront/pricing/)
 - Video streaming allowed?
   - Yes
 
@@ -189,7 +189,7 @@ This is a list of CDN with a detailed description of each one.
   - Yes
 - Pricing
   - Visit pricing page for more.
-  - ['Pricing page'](https://www.fastly.com/pricing)
+  - [Pricing page](https://www.fastly.com/pricing)
   - $0.08/GB~$0.28/GB
 - Video streaming allowed?
   - Yes
@@ -276,7 +276,7 @@ This is a list of CDN with a detailed description of each one.
   - Yes
 - Pricing
   - Not an attractive price.
-  - ['Pricing page'](https://www.cdnetworks.com/cdnpro-pricing/)
+  - [Pricing page](https://www.cdnetworks.com/cdnpro-pricing/)
 - Video streaming allowed?
   - Yes
 
