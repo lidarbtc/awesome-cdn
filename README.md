@@ -10,6 +10,25 @@ This is a list of CDN with a detailed description of each one.
 
 ## 📖 Table of Contents
 
+- [Cloudflare](#cloudflare)
+- [Gcore](#gcore)
+- [BunnyCDN](#bunnycdn)
+- [Akamai](#akamai)
+- [CDN77](#cdn77)
+- [CloudFront(AWS)](#cloudfrontaws)
+- [StackPath](#stackpath)
+- [Fastly](#fastly)
+- [CacheFly](#cachefly)
+- [Imperva](#imperva)
+- [Edgio](#edgio)
+- [LumenCDN](#lumencdn)
+- [CDNetworks](#cdnetworks)
+- [KeyCDN](#keycdn)
+- [BelugaCDN](#belugacdn)
+- [DDOS-Guard](#ddos-guard)
+- [BlazingCDN](#blazingcdn)
+- [FDCservers](#fdcservers)
+
 ## 📦 CDN List
 
 ### FAQ
@@ -304,7 +323,7 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - If you know, please send a pull request.
 
-### [BlzingCDN](https://blazingcdn.com/)
+### [BlazingCDN](https://blazingcdn.com/)
 
 - Description
   - Cheapest player
