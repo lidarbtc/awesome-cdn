@@ -1,4 +1,5 @@
 <h1 align="center">
+    <img width="380" src="/cdn.love.png" />
     <br> Awesome CDN
 </h1>
 
