@@ -335,7 +335,7 @@ This is a list of CDN with a detailed description of each one.
 - Have POP in korea?
   - No
 - Pricing
-  - $0.005/GB
+  - $0.005/GB == $5/TB
   - There are additional discounts for bulk contracts.
 - Video streaming allowed?
   - Yes
