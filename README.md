@@ -47,6 +47,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - They provide a cdn, dns with a free plan.
   - Most recommended cdn for free plan.
+- Network edge capacity
+  - 209 Tbps(2023.08)
 - Have a free plan?
   - Yes
 - Have a POP in korea?
@@ -72,6 +74,8 @@ This is a list of CDN with a detailed description of each one.
   - They provide a cdn, dns with a free plan.
   - 1TB/month bandwidth for free plan.
   - L7 ddos protection is available for enterprise plan.
+- Network edge capacity
+  - 110 Tbps(2023.08)
 - Have a free plan?
   - Yes
 - Have a POP in korea?
@@ -94,6 +98,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - They provide a cdn, dns with a free trial.
   - 14 days free trial, no cc required.
+- Network edge capacity
+  - 80 Tbps(2023.08)
 - Have a free plan?
   - Yes, but only 14 days.
 - Have a POP in korea?
@@ -118,6 +124,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - Most biggest CDN provider.
   - Focus on enterprise
+- Network edge capacity
+  - 300 Tbps(2023.08)
 - Have a free plan?
   - No
 - Have a POP in korea?
@@ -151,6 +159,8 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - AWS, Expensive
+- Network edge capacity
+  - ? Tbps(2023.08)
 - Have a free plan?
   - Yes, 1TB/month always free
 - Have a POP in korea?
@@ -166,6 +176,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - Focus on ddos protection.
   - Also expensive
+- Network edge capacity
+  - 100 Tbps(2023.08)
 - Have a free plan?
   - No
 - Have a POP in korea?
@@ -184,6 +196,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - Pricing is insanely expensive.
   - But no one pays full price for that, so reach out to sales and ask for enterprise pricing.
+- Network edge capacity
+  - 277 Tbps(2023.08)
 - Have a free plan?
   - Yes, always free for small website
 - Have a POP in korea?
@@ -200,6 +214,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - 5TB/m traffic with always free plan!
   - But free user can use only EU/USA POP.
+- Network edge capacity
+  - ? Tbps(2023.08)
 - Have a free plan?
   - Yes, but only EU/USA POP
 - Have a POP in korea?
@@ -228,6 +244,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - Focus on ddos protection.
   - also WAF
+- Network edge capacity
+  - 10 Tbps(2023.08)
 - Have a free plan?
   - Yes, contact sales team.
 - Have a POP in korea?
@@ -243,6 +261,8 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - Formerly Limelight Networks
+- Network edge capacity
+  - 250 Tbps(2023.08)
 - Have a free plan?
   - Yes, I don't have more information, but it appears to be a trial.
 - Have a POP in korea?
@@ -257,6 +277,8 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - As the name suggests, it is a CDN provided by tier 1 ISP Lumen.
+- Network edge capacity
+  - ? Tbps(2023.08)
 - Have a free plan?
   - No
 - Have a POP in korea?
@@ -271,6 +293,8 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - CDN focused on Asia (specifically China).
+- Network edge capacity
+  - 15 Tbps(2023.08)
 - Have a free plan?
   - Yes, contact sales team.
 - Have a POP in korea?
@@ -285,6 +309,8 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - Made in Switzerland(?)
+- Network edge capacity
+  - ? Tbps(2023.08)
 - Have a free plan?
   - No
 - Have a POP in korea?
@@ -299,6 +325,8 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - Cheap
+- Network edge capacity
+  - ? Tbps(2023.08)
 - Have a free plan?
   - No
 - Have a POP in korea?
@@ -314,6 +342,8 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - Aka "bulletproof CDN"
   - Company located in russia, they don't care about dmca and other many abuse.
+- Network edge capacity
+  - 3.2 Tbps(2023.08)
 - Have a free plan?
   - No
 - Have POP in korea?
@@ -330,6 +360,8 @@ This is a list of CDN with a detailed description of each one.
   - Cheapest player
   - advancedhosting.com reseller
   - Upstream is only Ntt
+- Network edge capacity
+  - 2 Tbps(2023.08)
 - Have a free plan?
   - Yes, 10GB/m
 - Have POP in korea?
@@ -347,6 +379,8 @@ This is a list of CDN with a detailed description of each one.
   - Upstream is only Cogent
   - All traffic is first routed to the LA before being processed.
   - In Asia, you will experience latency of over 300ms.
+- Network edge capacity
+  - 100 Tbps(2023.08)
 - Have a free plan?
   - No
 - Have POP in korea?
