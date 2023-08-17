@@ -280,7 +280,7 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - As the name suggests, it is a CDN provided by tier 1 ISP Lumen.
 - Network edge capacity
-  - ? Tbps(2023.08)
+  - 170 Tbps(2023.08)
 - Have a free plan?
   - No
 - Have a POP in korea?
