@@ -319,7 +319,7 @@ This is a list of CDN with a detailed description of each one.
   - Yes
 - Pricing
   - Also Not an attractive price.
-  - ['Pricing page'](https://www.keycdn.com/pricing)
+  - [Pricing page](https://www.keycdn.com/pricing)
 - Video streaming allowed?
   - Yes
 
