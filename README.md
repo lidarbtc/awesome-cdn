@@ -5,6 +5,8 @@
 
 ## 📝 Outline
 
+2023-9, stackpath closed their business.
+
 This is a list of CDN with a detailed description of each one.
 
 > Pull requests are welcome.
