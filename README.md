@@ -89,8 +89,8 @@ This is a list of CDN with a detailed description of each one.
   - Enterprise plan: Contact sales
 - Additional bandwidth price
   - Free plan: 1TB free, $0.0315/GB for overage
-  - Start plan: 1TB free, $0.24/GB for overage
-  - Pro plan: 5TB free, $0.21/GB for overage
+  - Start plan: 1TB free, $0.024/GB for overage
+  - Pro plan: 5TB free, $0.021/GB for overage
   - Enterprise plan: If you have any information about this, please pull request.
 - Video streaming allowed?
   - Yes, for all plan.
