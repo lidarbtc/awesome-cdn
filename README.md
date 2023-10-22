@@ -5,8 +5,6 @@
 
 ## 📝 Outline
 
-2023-9, stackpath closed their business.
-
 This is a list of CDN with a detailed description of each one.
 
 > Pull requests are welcome.
@@ -19,7 +17,6 @@ This is a list of CDN with a detailed description of each one.
 - [Akamai](#akamai)
 - [CDN77](#cdn77)
 - [CloudFront(AWS)](#cloudfrontaws)
-- [StackPath](#stackpath)
 - [Fastly](#fastly)
 - [CacheFly](#cachefly)
 - [Imperva](#imperva)
@@ -172,26 +169,6 @@ This is a list of CDN with a detailed description of each one.
 - Pricing
   - It's complicated, visit pricing page for more.
   - [Pricing page](https://aws.amazon.com/cloudfront/pricing/)
-- Video streaming allowed?
-  - Yes
-
-### [StackPath](https://www.stackpath.com/)
-
-- Description
-  - Focus on ddos protection.
-  - Also expensive
-- Network edge capacity
-  - 100 Tbps(2023.08)
-- Have a free plan?
-  - No
-- Have a POP in korea?
-  - Yes
-- Pricing
-  - 1TB: $27.5/m
-  - Adittional bandwidth
-    - 1TB-100TB: $0.044/GB
-    - 100TB-1PB: $0.033/GB
-    - Above 1PB: Contact sales team.
 - Video streaming allowed?
   - Yes
 
