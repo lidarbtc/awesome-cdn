@@ -47,7 +47,7 @@ This is a list of CDN with a detailed description of each one.
   - They provide a cdn, dns with a free plan.
   - Most recommended cdn for free plan.
 - Network edge capacity
-  - 248 Tbps(2023.08)
+  - 248 Tbps(2024.02)
 - Have a free plan?
   - Yes
 - Have a POP in korea?
