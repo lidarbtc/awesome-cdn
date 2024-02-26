@@ -342,7 +342,7 @@ This is a list of CDN with a detailed description of each one.
   - advancedhosting.com reseller
   - Upstream is only Ntt
 - Network edge capacity
-  - 2 Tbps(2023.08)
+  - 3 Tbps(2024.02)
 - Have a free plan?
   - Yes, 10GB/m
 - Have POP in korea?
