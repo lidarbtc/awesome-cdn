@@ -178,7 +178,7 @@ This is a list of CDN with a detailed description of each one.
   - Pricing is insanely expensive.
   - But no one pays full price for that, so reach out to sales and ask for enterprise pricing.
 - Network edge capacity
-  - 277 Tbps(2023.08)
+  - 291 Tbps(2024.02)
 - Have a free plan?
   - Yes, always free for small website
 - Have a POP in korea?
