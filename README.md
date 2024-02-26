@@ -141,7 +141,7 @@ This is a list of CDN with a detailed description of each one.
   - Parent company of datapacket.com
   - Recommended for large bandwidth users.
 - Network edge capacity
-  - 120 Tbps(2023.08)
+  - 150 Tbps(2024.02)
 - Have a free plan?
   - Yes, 1TB traffic include.
 - Have a POP in korea?
