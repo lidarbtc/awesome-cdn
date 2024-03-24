@@ -306,6 +306,7 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - Cheap
+  - Use vultr as a infra.
 - Network edge capacity
   - ? Tbps(2023.08)
 - Have a free plan?
