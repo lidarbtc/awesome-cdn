@@ -31,12 +31,6 @@ This is a list of CDN with a detailed description of each one.
 
 ## 📦 CDN List
 
-### FAQ
-
-- Why is this list indicate whether the cdn has an POP in korea?
-  - Because bandwidth price in korea are among the highest in the world.
-  - For example, cloudflare provide korea POP for only enterprise plan.(=<$5000)
-
 ### Rules
 
 - CDN must have POPs in at least two countries to qualify for this list.
@@ -50,8 +44,6 @@ This is a list of CDN with a detailed description of each one.
   - 248 Tbps(2024.02)
 - Have a free plan?
   - Yes
-- Have a POP in korea?
-  - Yes, but only for enterprise plan.(=<$5000)
 - Pricing
   - Free plan: Free
   - Pro plan: $25/month
@@ -77,8 +69,6 @@ This is a list of CDN with a detailed description of each one.
   - 110 Tbps(2023.08)
 - Have a free plan?
   - Yes
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Free plan: Free
   - Start plan: $37/month
@@ -101,8 +91,6 @@ This is a list of CDN with a detailed description of each one.
   - 80 Tbps(2023.08)
 - Have a free plan?
   - Yes, but only 14 days.
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Standard Network 114 PoPs
     - Europe & North America: $0.01/GB
@@ -127,8 +115,6 @@ This is a list of CDN with a detailed description of each one.
   - 300 Tbps(2023.08)
 - Have a free plan?
   - No
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Enterprise: Contact sales team.
   - I reached out to them and they have a similar pricing policy to other CDNs.
@@ -144,8 +130,6 @@ This is a list of CDN with a detailed description of each one.
   - 150 Tbps(2024.02)
 - Have a free plan?
   - Yes, 1TB traffic include.
-- Have a POP in korea?
-  - No
 - Pricing
   - 6TB: $0.033/GB
   - 25TB: $0.015/GB
@@ -164,8 +148,6 @@ This is a list of CDN with a detailed description of each one.
   - ? Tbps(2023.08)
 - Have a free plan?
   - Yes, 1TB/month always free
-- Have a POP in korea?
-  - Yes
 - Pricing
   - It's complicated, visit pricing page for more.
   - [Pricing page](https://aws.amazon.com/cloudfront/pricing/)
@@ -181,8 +163,6 @@ This is a list of CDN with a detailed description of each one.
   - 291 Tbps(2024.02)
 - Have a free plan?
   - Yes, always free for small website
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Visit pricing page for more.
   - [Pricing page](https://www.fastly.com/pricing)
@@ -199,8 +179,6 @@ This is a list of CDN with a detailed description of each one.
   - ? Tbps(2023.08)
 - Have a free plan?
   - Yes, but only EU/USA POP
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Free:
     - $0/m
@@ -229,8 +207,6 @@ This is a list of CDN with a detailed description of each one.
   - 10 Tbps(2023.08)
 - Have a free plan?
   - Yes, contact sales team.
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Start >=$200
   - Contact sales team.
@@ -246,8 +222,6 @@ This is a list of CDN with a detailed description of each one.
   - 250 Tbps(2023.08)
 - Have a free plan?
   - Yes, I don't have more information, but it appears to be a trial.
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Contact sales team.
   - I've heard it's relatively inexpensive.
@@ -262,8 +236,6 @@ This is a list of CDN with a detailed description of each one.
   - 170 Tbps(2023.08)
 - Have a free plan?
   - No
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Contact sales team.
   - Not much information.
@@ -278,8 +250,6 @@ This is a list of CDN with a detailed description of each one.
   - 15 Tbps(2023.08)
 - Have a free plan?
   - Yes, contact sales team.
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Not an attractive price.
   - [Pricing page](https://www.cdnetworks.com/cdnpro-pricing/)
@@ -294,8 +264,6 @@ This is a list of CDN with a detailed description of each one.
   - ? Tbps(2023.08)
 - Have a free plan?
   - No
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Also Not an attractive price.
   - [Pricing page](https://www.keycdn.com/pricing)
@@ -311,8 +279,6 @@ This is a list of CDN with a detailed description of each one.
   - ? Tbps(2023.08)
 - Have a free plan?
   - No
-- Have a POP in korea?
-  - Yes
 - Pricing
   - Global same price, $0.01/GB
   - There are additional discounts for bulk contracts.
@@ -324,11 +290,10 @@ This is a list of CDN with a detailed description of each one.
 - Description
   - Aka "bulletproof CDN"
   - Company located in russia, they don't care about dmca and other many abuse.
+  - Only have 3 POP. EU, NA, HK. 
 - Network edge capacity
   - 3.2 Tbps(2023.08)
 - Have a free plan?
-  - No
-- Have POP in korea?
   - No
 - Pricing
   - Start $100/m
@@ -340,14 +305,12 @@ This is a list of CDN with a detailed description of each one.
 
 - Description
   - Cheapest player
-  - advancedhosting.com reseller
+  - advancedhosting.com's brand
   - Upstream is only Ntt
 - Network edge capacity
   - 3 Tbps(2024.02)
 - Have a free plan?
   - Yes, 10GB/m
-- Have POP in korea?
-  - No
 - Pricing
   - $0.005/GB == $5/TB
   - There are additional discounts for bulk contracts.
@@ -364,8 +327,6 @@ This is a list of CDN with a detailed description of each one.
 - Network edge capacity
   - 100 Tbps(2023.08)
 - Have a free plan?
-  - No
-- Have POP in korea?
   - No
 - Pricing
   - $4/TB
