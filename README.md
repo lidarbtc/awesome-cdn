@@ -89,7 +89,7 @@ This is a list of CDN with a detailed description of each one.
   - They provide a cdn, dns with a free trial.
   - 14 days free trial, no cc required.
 - Network edge capacity
-  - 80 Tbps(2023.08)
+  - 150 Tbps(2024.07)
 - Have a free plan?
   - Yes, but only 14 days.
 - Pricing
@@ -113,7 +113,7 @@ This is a list of CDN with a detailed description of each one.
   - Most biggest CDN provider.
   - Focus on enterprise
 - Network edge capacity
-  - 300 Tbps(2023.08)
+  - Over 1 Pbps(2024.07)
 - Have a free plan?
   - No
 - Pricing
@@ -128,7 +128,7 @@ This is a list of CDN with a detailed description of each one.
   - Parent company of datapacket.com
   - Recommended for large bandwidth users.
 - Network edge capacity
-  - 150 Tbps(2024.02)
+  - 180 Tbps(2024.07)
 - Have a free plan?
   - Yes, 1TB traffic include.
 - Pricing
@@ -158,7 +158,7 @@ This is a list of CDN with a detailed description of each one.
   - Pricing is insanely expensive.
   - But no one pays full price for that, so reach out to sales and ask for enterprise pricing.
 - Network edge capacity
-  - 291 Tbps(2024.02)
+  - 336 Tbps(2024.07)
 - Have a free plan?
   - Yes, always free for small website
 - Pricing
@@ -202,7 +202,7 @@ This is a list of CDN with a detailed description of each one.
   - Focus on ddos protection.
   - also WAF
 - Network edge capacity
-  - 10 Tbps(2023.08)
+  - 13 Tbps(2024.07)
 - Have a free plan?
   - Yes, contact sales team.
 - Pricing
@@ -306,7 +306,7 @@ This is a list of CDN with a detailed description of each one.
   - advancedhosting.com's brand
   - Upstream is only Ntt
 - Network edge capacity
-  - 3 Tbps(2024.02)
+  - 5 Tbps(2024.07)
 - Have a free plan?
   - Yes, 10GB/m
 - Pricing
