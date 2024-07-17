@@ -67,7 +67,7 @@ This is a list of CDN with a detailed description of each one.
   - 1TB/month bandwidth for free plan.
   - L7 ddos protection is available for enterprise plan.
 - Network edge capacity
-  - 110 Tbps(2023.08)
+  - 200 Tbps(2024.07)
 - Have a free plan?
   - Yes
 - Pricing
