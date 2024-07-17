@@ -132,12 +132,9 @@ This is a list of CDN with a detailed description of each one.
 - Have a free plan?
   - Yes, 1TB traffic include.
 - Pricing
-  - 6TB: $0.033/GB
-  - 25TB: $0.015/GB
-  - 50TB: $0.012/GB
-  - 100TB: $0.010/GB
-  - 150TB: $0.009/GB
-  - Over 150TB: Contact sales team.
+  - 250TB: $990/M
+    - $3.96/TB overages
+  - Over 250TB: Contact sales team.
 - Video streaming allowed?
   - Yes
 
