@@ -42,7 +42,7 @@ This is a list of CDN with a detailed description of each one.
   - Most recommended cdn for free plan.
   - In free plan, APAC route is conditionally provided.
 - Network edge capacity
-  - 248 Tbps(2024.02)
+  - 280 Tbps(2024.02)
 - Have a free plan?
   - Yes
 - Pricing
