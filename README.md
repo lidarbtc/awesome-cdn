@@ -219,12 +219,12 @@ This is a list of CDN with a detailed description of each one.
 - Network edge capacity
   - 250 Tbps(2023.08)
 - Have a free plan?
-  - Yes, I don't have more information, but it appears to be a trial.
+  - Yes, for unmetered traffic, but not for streaming video or audio, and large files.
 - Pricing
   - Contact sales team.
   - I've heard it's relatively inexpensive.
 - Video streaming allowed?
-  - Yes
+  - Yes(not in free plan)
 
 ### [LumenCDN](https://www.lumen.com/en-us/edge-cloud/cdn.html)
 
