@@ -20,7 +20,6 @@ This is a list of CDN with a detailed description of each one.
 - [Fastly](#fastly)
 - [CacheFly](#cachefly)
 - [Imperva](#imperva)
-- [Edgio](#edgio)
 - [LumenCDN](#lumencdn)
 - [CDNetworks](#cdnetworks)
 - [KeyCDN](#keycdn)
@@ -211,20 +210,6 @@ This is a list of CDN with a detailed description of each one.
   - Very expensive, not suitable for large websites.
 - Video streaming allowed?
   - If you know, please send a pull request.
-
-### [Edgio](https://edg.io/)
-
-- Description
-  - Formerly Limelight Networks
-- Network edge capacity
-  - 250 Tbps(2023.08)
-- Have a free plan?
-  - Yes, for unmetered traffic, but not for streaming video or audio, and large files.
-- Pricing
-  - Contact sales team.
-  - I've heard it's relatively inexpensive.
-- Video streaming allowed?
-  - Yes(not in free plan)
 
 ### [LumenCDN](https://www.lumen.com/en-us/edge-cloud/cdn.html)
 
