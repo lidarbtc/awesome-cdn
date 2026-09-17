@@ -20,13 +20,16 @@ This is a list of CDN with a detailed description of each one.
 - [Fastly](#fastly)
 - [CacheFly](#cachefly)
 - [Imperva](#imperva)
-- [LumenCDN](#lumencdn)
 - [CDNetworks](#cdnetworks)
 - [KeyCDN](#keycdn)
 - [BelugaCDN](#belugacdn)
 - [DDOS-Guard](#ddos-guard)
 - [BlazingCDN](#blazingcdn)
 - [FDCservers](#fdcservers)
+- [Closed CDN Services](#closed-cdn-services)
+  - [StackPath](#stackpath)
+  - [Edgio](#edgio)
+  - [LumenCDN](#lumencdn)
 
 ## 📦 CDN List
 
@@ -211,20 +214,6 @@ This is a list of CDN with a detailed description of each one.
 - Video streaming allowed?
   - If you know, please send a pull request.
 
-### [LumenCDN](https://www.lumen.com/en-us/edge-cloud/cdn.html)
-
-- Description
-  - As the name suggests, it is a CDN provided by tier 1 ISP Lumen.
-- Network edge capacity
-  - 170 Tbps(2023.08)
-- Have a free plan?
-  - No
-- Pricing
-  - Contact sales team.
-  - Not much information.
-- Video streaming allowed?
-  - Yes
-
 ### [CDNetworks](https://www.cdnetworks.com/)
 
 - Description
@@ -314,5 +303,57 @@ This is a list of CDN with a detailed description of each one.
 - Pricing
   - $4/TB
   - There are discounts for using more than 100 TB.
+- Video streaming allowed?
+  - Yes
+
+## Closed CDN Services
+
+These CDN services have shut down. The descriptions and pricing below are preserved for historical reference.
+
+### [StackPath](https://www.stackpath.com/)
+
+- Description
+  - Focus on ddos protection.
+  - Also expensive
+- Network edge capacity
+  - 100 Tbps(2023.08)
+- Have a free plan?
+  - No
+- Have a POP in korea?
+  - Yes
+- Pricing
+  - 1TB: $27.5/m
+  - Adittional bandwidth
+    - 1TB-100TB: $0.044/GB
+    - 100TB-1PB: $0.033/GB
+    - Above 1PB: Contact sales team.
+- Video streaming allowed?
+  - Yes
+
+### [Edgio](https://edg.io/)
+
+- Description
+  - Formerly Limelight Networks
+- Network edge capacity
+  - 250 Tbps(2023.08)
+- Have a free plan?
+  - Yes, for unmetered traffic, but not for streaming video or audio, and large files.
+- Pricing
+  - Contact sales team.
+  - I've heard it's relatively inexpensive.
+- Video streaming allowed?
+  - Yes(not in free plan)
+
+### [LumenCDN](https://www.lumen.com/en-us/edge-cloud/cdn.html)
+
+- Description
+  - As the name suggests, it is a CDN provided by tier 1 ISP Lumen.
+- Network edge capacity
+  - 170 Tbps(2023.08)
+- Have a free plan?
+  - No
+- Pricing
+  - Contact sales team.
+  - Not much information.
 - Video streaming allowed?
   - Yes
