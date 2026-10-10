@@ -1,0 +1,59 @@
+{
+  "reviewedAt": "2026-10-10",
+  "method": "Opened official vendor pricing, product, network and documentation pages. No authenticated account, sales quote or network measurement was obtained. Verification refers to the published claim, not independent performance measurement.",
+  "providers": [
+    {
+      "slug": "cdn77",
+      "evidence": [
+        { "url": "https://www.cdn77.com/pricing", "access": "opened", "fields": ["pricing", "freeTier", "video"], "findings": "Growth publishes $990 per month for 250 TB, $3.96 per additional TB, all PoPs and CDN features. Enterprise is custom. Page advertises VOD/live features and a sales-assisted trial/testing period." },
+        { "url": "https://www.cdn77.com/network", "access": "opened", "fields": ["network"], "findings": "330 Tbps network, 235 PoPs in 135 countries, 50 Tbps private backbone and 85 Tbps daily traffic peak are distinct figures. UI uses the network total and PoP coverage only." }
+      ],
+      "limits": ["Trial cost, allowance and duration are not published on the opened pricing page; freeTier verification remains partial. No ongoing free CDN plan was established."],
+      "changes": ["Replaced secondary-source framing with directly verified Growth pricing and the current official network description."]
+    },
+    {
+      "slug": "akamai",
+      "evidence": [
+        { "url": "https://www.akamai.com/products/adaptive-media-delivery", "access": "opened", "fields": ["pricing", "freeTier", "video"], "findings": "The product page supports live and on-demand HLS, MPEG-DASH and CMAF delivery. Its Get started section advertises a free 30-day trial and directs pricing enquiries to sales." },
+        { "url": "https://www.akamai.com/glossary/what-is-a-cdn", "access": "opened", "fields": ["network"], "findings": "The vendor-specific CDN solutions section reports edge capacity exceeding 1 Pbps, more than 4,100 locations, over 1,200 networks and 120+ countries." },
+        { "url": "https://www.akamai.com/why-akamai/global-infrastructure", "access": "opened", "fields": ["network"], "findings": "Separates core cloud, distributed compute and CDN edge sites. General cloud-region pricing should not be reused as delivery-product pricing." }
+      ],
+      "limits": ["Trial is explicitly scoped to Adaptive Media Delivery, not every Akamai product. Its CTA resolves to the same product page; no trial account was created.", "No public numeric delivery tariff or contract minimum was established. The 1+ Pbps claim is on a currently accessible official page without an effective-date annotation."],
+      "changes": ["Changed no-free-plan classification to a product-specific 30-day trial.", "Replaced the unlinked historical capacity claim with a directly opened official source."]
+    },
+    {
+      "slug": "cachefly",
+      "evidence": [
+        { "url": "https://www.cachefly.com/cdn-pricing/", "access": "opened", "fields": ["pricing", "freeTier"], "findings": "Navigation-linked pricing lists Adoption $299, Production $1,499 and Governance $3,499 per month, each with 10 TB monthly. Additional bandwidth is quoted; email support is included and advanced support begins at $995 monthly. Free account: 100 GB and one domain." },
+        { "url": "https://www.cachefly.com/network-map/", "access": "opened", "fields": ["network"], "findings": "Map differentiates premium/private PoPs; Seoul carries the private marker. Planned Marseille and private points mean a raw total would overstate standard-plan availability." },
+        { "url": "https://www.cachefly.com/ultra-low-latency-video-streaming/", "access": "opened", "fields": ["video"], "findings": "Documents live streaming, VOD, HLS/DASH integration and video workflows. Specialized features can require a customized solution." },
+        { "url": "https://www.cachefly.com/pricing/", "access": "opened", "fields": ["pricing", "freeTier"], "findings": "Alternate accessible pricing page instead lists Business from $300 and Enterprise from $2,000. Its Developer section says 100 GB monthly with $0.05/GB overage, while lower content also advertises an inconsistent 5 TB free option." },
+        { "url": "https://www.cachefly.com/free/", "access": "opened", "fields": ["freeTier", "policy"], "findings": "Advertises a free developer account but also uses free-trial language and says self-signup requires a credit card with a refunded $1 verification charge." }
+      ],
+      "limits": ["Paid pricing marked partial because multiple official public pages conflict; current navigation points to /cdn-pricing/, so its packages are used without combining old tariffs.", "100 GB and one domain are on the current pricing page. The renewal period is only explicit on the conflicting alternate page; UI therefore omits '/month' from the free allowance.", "No aggregate delivery capacity was confirmed. Private Seoul coverage must not imply default access on every plan."],
+      "changes": ["Kept current paid package prices, clarified separately priced bandwidth/support and removed the unsupported always-free monthly recurrence wording.", "Added the private status of the Seoul PoP instead of a generic unknown-capacity statement."]
+    },
+    {
+      "slug": "imperva",
+      "evidence": [
+        { "url": "https://www.imperva.com/free-trial/", "access": "opened", "fields": ["freeTier", "policy"], "findings": "30-day trial covers CDN, Cloud WAF, DDoS and bot protection. Trial terms reserve a 100 Mbps bandwidth cap and null-routing above that threshold." },
+        { "url": "https://www.imperva.com/products/global-network-map/", "access": "opened", "fields": ["network"], "findings": "Lists 60 DDoS-resilient data centers and Seoul operational." },
+        { "url": "https://www.imperva.com/products/ddos-protection-services/", "access": "opened", "fields": ["network"], "findings": "Defines the 13 Tbps number explicitly as global DDoS scrubbing capacity, including website/network protection sections. It is not established as CDN payload delivery capacity." },
+        { "url": "https://www.imperva.com/contact-us/", "access": "opened", "fields": ["pricing"], "findings": "Official enquiry form is available; no product rate or billing period is published here." },
+        { "url": "https://www.imperva.com/products/content-delivery-network-cdn/", "access": "intermittent", "fields": ["video", "pricing"], "findings": "Initial click returned page metadata; repeated body opens timed out. Official indexed extract describes static/dynamic website acceleration and WAAP, without a video entitlement or numeric tariff." },
+        { "url": "https://www.imperva.com/resources/datasheets/imperva-content-delivery-network-cdn.pdf", "access": "opened", "fields": ["network"], "findings": "Official 2023 datasheet confirms CDN and security integration but contains an older 50-location count; current map's 60 is used instead." }
+      ],
+      "limits": ["Pricing marked partial: sales enquiry is the available path, but no numeric pricing, minimum commitment or billing period was verified.", "Video remains unknown. An educational CDN guide mentioning videos as cacheable content does not establish an Imperva plan's video-delivery entitlement."],
+      "changes": ["Removed the ambiguous $200+ amount.", "Kept trial duration with its substantive bandwidth restriction, and retained scrubbing/delivery distinction."]
+    },
+    {
+      "slug": "cdnetworks",
+      "evidence": [
+        { "url": "https://www.cdnetworks.com/products/cdnpro-pricing/", "access": "opened after initial fetch failure", "fields": ["pricing", "freeTier", "network", "policy"], "findings": "CDN Pro publishes non-China group prices $0.04/$0.08/$0.158/$0.237 per GB and $1.95 per CPU-hour. Professional minimum is $50 monthly. Enterprise China Standard/Premium/Near China are $0.043/$0.079/$0.938 per GB. Trial needs no card or commitment. Coverage includes Seoul; mainland groups require ICP BeiAn and Enterprise." },
+        { "url": "https://documents.cdnetworks.com/document/media-live-vod/overviewvod", "access": "opened", "fields": ["video", "network"], "publishedOrUpdatedAt": "2026-05-15", "findings": "Media Acceleration VoD docs confirm video delivery and state company-wide 2,800+ PoPs, 70+ countries/regions and 200+ Tbps. This footprint belongs to the broader network and must not be equated with every CDN Pro plan's selectable groups." }
+      ],
+      "limits": ["The trial pricing page does not establish a duration or included credit, so neither is shown.", "Media Acceleration is a separate video product; CDN Pro's listed tariff is not asserted to price that entire media service.", "China availability is a product requirement statement from the official pricing table, not independent legal advice."],
+      "changes": ["Changed quote-only placeholder to CDN Pro usage pricing with its CPU charge and $50 minimum.", "Replaced an undifferentiated total-capacity note with product-specific server-group coverage."]
+    }
+  ]
+}

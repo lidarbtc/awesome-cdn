@@ -1,0 +1,407 @@
+{
+  "reviewedAt": "2026-10-10",
+  "scope": [
+    "keycdn",
+    "belugacdn",
+    "ddos-guard",
+    "blazingcdn",
+    "fdcservers"
+  ],
+  "method": "Public official pages opened using web browsing; direct HTTP GET and HTML/PDF text extraction used where the browser fetch failed. No account creation, payment, or private information access.",
+  "providers": [
+    {
+      "slug": "keycdn",
+      "sources": [
+        {
+          "url": "https://www.keycdn.com/pricing",
+          "access": "web, successful",
+          "evidence": {
+            "first10TBUSDPerGB": {
+              "North America + Europe": 0.04,
+              "Asia + Oceania": 0.08,
+              "Africa + Latin America": 0.1
+            },
+            "next40TBUSDPerGB": [
+              0.03,
+              0.06,
+              0.08
+            ],
+            "next50TBUSDPerGB": [
+              0.02,
+              0.04,
+              0.06
+            ],
+            "over100TBUSDPerGB": [
+              0.01,
+              0.02,
+              0.04
+            ],
+            "monthlyMinimumUSD": 4,
+            "minimumPaymentUSD": 49,
+            "requestFeeUSD": 0,
+            "includedZones": 3,
+            "extraZoneMonthlyUSD": 1
+          },
+          "notes": "Regional row ordering in subsequent tiers matches first10TBUSDPerGB. Extra services include push storage, image processing, and raw-log forwarding."
+        },
+        {
+          "url": "https://www.keycdn.com/faq",
+          "access": "web, successful",
+          "evidence": "General FAQ states a 14-day free trial without a credit card."
+        },
+        {
+          "url": "https://www.keycdn.com/network",
+          "access": "web initially successful; later timeouts; direct HTTP 200 fallback",
+          "evidence": "Six-continent footprint; Asia table lists Seoul, Tokyo, Singapore and Hong Kong. Network page uses a mixed active/planned map, so operational Seoul was cross-checked."
+        },
+        {
+          "url": "https://status.keycdn.com/",
+          "access": "web, successful",
+          "evidence": "Seoul krse is listed operational."
+        },
+        {
+          "url": "https://www.keycdn.com/video-cdn",
+          "access": "web, successful",
+          "evidence": "Product explicitly supports video on demand and HTTP live streams."
+        }
+      ],
+      "corrections": [
+        "Changed free-tier classification from no to trial.",
+        "Added minimum payment separately from recurring minimum usage.",
+        "Replaced absent price detail with regional first-tier rates.",
+        "Replaced vague network capacity text with verified footprint."
+      ],
+      "unverified": [
+        "No independent end-user performance or aggregate network-capacity figure is asserted."
+      ],
+      "editorialPreserved": "Maintainer opinion that the pricing is not especially attractive is retained alongside the newly verified minimum-payment and monthly-minimum facts."
+    },
+    {
+      "slug": "belugacdn",
+      "sources": [
+        {
+          "url": "https://www.belugacdn.com/cdn/",
+          "access": "web, successful",
+          "evidence": {
+            "paygUSDPerGB": 0.01,
+            "activeAccountMonthlyUSD": 1,
+            "initialCreditGB": 1000,
+            "initialPaymentUSD": 10,
+            "advertisedTrialDays": 30,
+            "video": [
+              "live",
+              "on demand"
+            ],
+            "network": [
+              "IPv4",
+              "IPv6",
+              "Chicago",
+              "Miami",
+              "Amsterdam",
+              "Tokyo"
+            ]
+          }
+        },
+        {
+          "url": "https://www.belugacdn.com/faq/",
+          "access": "web, successful",
+          "evidence": "Trial is described for the Pro plan. FAQ lists 28 PoPs and 9 SuperPoPs without a dated inventory; location totals are omitted from the public record."
+        },
+        {
+          "url": "https://www.belugacdn.com/legal/sla.html",
+          "access": "web, successful",
+          "evidence": {
+            "includedRequestsPerGB": 5000,
+            "extraUSDPer10000Requests": 0.0035,
+            "GBBytes": 1000000000
+          },
+          "notes": "The document includes an August 19, 2016 rate date; the active homepage independently confirms the request-overage threshold."
+        },
+        {
+          "url": "https://www.belugacdn.com/",
+          "access": "web, successful",
+          "evidence": "Homepage confirms request overages above 5,000 requests/GB and repeats PAYG credit/account-fee terms. Embedded signup content also shows a Pro package at $20/month, 2,500 GB, and a $240 subtotal."
+        }
+      ],
+      "conflicts": [
+        "Public package and signup content is inconsistent; some search-index snapshots show other package allowances. The public record presents explicitly labeled PAYG pricing and flags plan confirmation instead of selecting an unsupported package.",
+        "Trial marketing is available, but trial eligibility, signup billing behavior and whether PAYG receives the same trial were not tested."
+      ],
+      "corrections": [
+        "Changed no free plan classification to advertised trial with partial verification.",
+        "Preserved account fee and credit requirements; added verified request-overage unit.",
+        "Removed uncorroborated Vultr infrastructure claim."
+      ],
+      "unverified": [
+        "Current checkout terms and practical trial activation.",
+        "A published location list is not independent route validation."
+      ]
+    },
+    {
+      "slug": "ddos-guard",
+      "sources": [
+        {
+          "url": "https://ddos-guard.net/web-protection",
+          "access": "web fetch failed; direct HTTP 200",
+          "evidence": {
+            "monthlyUSD": {
+              "Basic": 100,
+              "Normal": 250,
+              "Medium": 600,
+              "Premium": 1000,
+              "Enterprise": 2500
+            },
+            "domains": {
+              "Basic": 1,
+              "Normal": 1,
+              "Medium": 3,
+              "Premium": 5,
+              "Enterprise": 10
+            },
+            "trialDays": 3,
+            "trialPlan": "Basic",
+            "discountPercent": {
+              "quarterly": 5,
+              "semiAnnual": 10,
+              "annual": 15
+            },
+            "CDNIncluded": true
+          },
+          "notes": "FAQ advertises unlimited legitimate website bandwidth and no extra charges for traffic or mitigated attacks. The wording covers website protection; it is not a verified bulk-media permission."
+        },
+        {
+          "url": "https://ddos-guard.net/technologies/cdn",
+          "access": "web fetch failed; direct HTTP 200",
+          "evidence": "Scrubbing nodes also cache website content. Regions are Russia, Europe, the United States, South America and Asia."
+        },
+        {
+          "url": "https://ddos-guard.net/about-us",
+          "access": "web fetch failed; direct HTTP 200",
+          "evidence": {
+            "scrubbingCapacityTbps": "4+",
+            "managingCompany": "IQWeb FZ-LLC"
+          }
+        },
+        {
+          "url": "https://ddos-guard.net/file/AUP.en.pdf",
+          "access": "web fetch failed; direct HTTP 200; pdftotext",
+          "evidence": "Policy effective 2025-01-13. Sections 2.2.4 and 3.3.2 prohibit copyright infringement; section 2.4 allows provider-defined resource limits.",
+          "decision": "The written policy establishes contractual restrictions only; it does not establish enforcement practice or invalidate reported reputation. Preserve attributed historical complaints separately from the AUP."
+        },
+        {
+          "url": "https://ddos-guard.net/file/sladdg_en.pdf",
+          "access": "web fetch failed; direct HTTP 200; pdftotext",
+          "evidence": "Contract permits suspension/termination for violations and abuse; confidentiality contains exceptions for authorized authorities and court requests.",
+          "decision": "No claim of immunity from takedown or law-enforcement requests."
+        },
+        {
+          "url": "https://ec.europa.eu/transparency/documents-register/api/files/SWD(2025)132_0/de00000001071956?rendition=false",
+          "access": "Web open initially successful; later timeout; direct HTTP 200 and pdftotext verified passage",
+          "title": "European Commission Counterfeit and Piracy Watch List, SWD(2025) 132 final",
+          "publishedAt": "2025-05-22",
+          "printedPage": 27,
+          "pdfPage": 28,
+          "evidence": "DDoS-Guard is again nominated by the audiovisual sector as a bulletproof hosting provider for pirate sites. The entry attributes non-response to takedown notices to rightholders.",
+          "scope": "The methodology says the list summarizes stakeholder allegations and responses, takes no position on them, and makes no finding of legal violations."
+        },
+        {
+          "url": "https://policy.trade.ec.europa.eu/news/commission-releases-report-intellectual-property-rights-third-countries-counterfeit-piracy-watch-2025-05-22_en",
+          "access": "Web search, official publisher release",
+          "evidence": "Confirms publication on May 22, 2025 and that the report draws on a 2024 public consultation."
+        },
+        {
+          "url": "https://www.motionpictures.org/wp-content/uploads/2025/10/MPA-Notorious-Markets-2025-Submission-.pdf",
+          "access": "Web PDF, successful",
+          "title": "MPA 2025 Notorious Markets submission",
+          "reportYear": 2025,
+          "printedPage": 33,
+          "pdfPage": 35,
+          "evidence": "MPA characterizes DDoS-Guard as a bulletproof hosting provider and alleges that it does not respond to takedown requests. The filing also discusses its CDN and reverse-proxy services.",
+          "scope": "Primary evidence of the industry association’s allegations, not independent adjudication. Exact filing day was not established; the official path is dated October 2025."
+        },
+        {
+          "url": "https://ustr.gov/sites/default/files/files/Press/Releases/2026/2025%20Notorious%20Markets%20List%20%28final%29.pdf",
+          "access": "Web PDF, successful",
+          "title": "USTR 2025 Review of Notorious Markets for Counterfeiting and Piracy",
+          "publishedAt": "2026-03-03",
+          "printedPage": 27,
+          "pdfPage": 30,
+          "evidence": "DDoS-Guard entry describes services including bulletproof hosting and attributes non-response to takedown requests to rights holders.",
+          "scope": "Historical reported enforcement complaints; do not assert blanket current conduct or legal immunity."
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/march/ustr-releases-2025-review-notorious-markets-counterfeiting-and-piracy",
+          "access": "Web search, official publisher release",
+          "publishedAt": "2026-03-03",
+          "evidence": "Confirms report release date and explains that the list does not constitute findings of legal violations."
+        }
+      ],
+      "corrections": [
+        "Confirmed entry price and three-day Basic trial directly.",
+        "Distinguished scrubbing capacity from CDN delivery capacity.",
+        "Restored historical permissive-enforcement reputation using named, dated primary government and industry reports. Do not transform those allegations into a current guarantee about DMCA notices or legal requests."
+      ],
+      "unverified": [
+        "Video and bulk-streaming product terms; retained video=unknown."
+      ],
+      "accessErrors": [
+        "Main domain and all attempted product URLs returned web-tool non-retryable errors or empty search results.",
+        "Sandbox Python GET initially failed DNS resolution. Authorized read-only direct GET outside the sandbox succeeded for all official pages and policy PDFs."
+      ],
+      "discardedSources": [
+        "Third-party reviews and comparison directories were found, but were not used as factual sources."
+      ],
+      "editorialPreserved": "Historical reputation for permissive abuse handling is retained through the EU May 2025 and USTR March 2026 attributions. MPA 2025 independently documents the industry complaint. Official AUP wording is not used to erase reputation or infer actual enforcement."
+    },
+    {
+      "slug": "blazingcdn",
+      "sources": [
+        {
+          "url": "https://blazingcdn.com/pricing/",
+          "access": "web, successful",
+          "evidence": {
+            "monthlyMinimumUSD": 25,
+            "marginalTiers": [
+              {
+                "fromTB": 0,
+                "toTB": 5,
+                "USDPerTB": 5
+              },
+              {
+                "fromTB": 5,
+                "toTB": 25,
+                "USDPerTB": 4.5
+              },
+              {
+                "fromTB": 25,
+                "toTB": 100,
+                "USDPerTB": 4
+              },
+              {
+                "fromTB": 100,
+                "toTB": 500,
+                "USDPerTB": 3.5
+              },
+              {
+                "fromTB": 500,
+                "toTB": 1000,
+                "USDPerTB": 3
+              },
+              {
+                "fromTB": 1000,
+                "toTB": 1500,
+                "USDPerTB": 2.5
+              }
+            ],
+            "requestsIncluded": true,
+            "regionalSurcharge": false,
+            "paidTest": {
+              "days": 14,
+              "USDPerTB": 5,
+              "monthlyMinimumWaived": true
+            },
+            "permanentVideoCache": {
+              "includedGB": 500,
+              "extraUSDPerGBMonth": 0.02
+            }
+          },
+          "notes": "Public example: 100 TB costs $415. Tiers are explicitly marginal. HLS/DASH uses an already prepared stream as origin. Above listed tiers use a quote, not extrapolation."
+        },
+        {
+          "url": "https://blazingcdn.com/about/",
+          "access": "web, successful",
+          "evidence": {
+            "network": "Own Anycast network",
+            "locations": "25+",
+            "publishedAPACCarriers": [
+              "NTT",
+              "Lumen",
+              "KINX",
+              "PLDT",
+              "Singtel",
+              "SK Broadband",
+              "Tata Communications",
+              "Telstra"
+            ]
+          }
+        }
+      ],
+      "corrections": [
+        "Preserved paid-test classification; it is explicitly not a free trial.",
+        "Clarified marginal tiers and permanent-cache charges.",
+        "Removed old unsupported aggregate capacity number."
+      ],
+      "unverified": [
+        "No independent carrier-path measurement; listed carriers remain provider-published information."
+      ]
+    },
+    {
+      "slug": "fdcservers",
+      "sources": [
+        {
+          "url": "https://fdcservers.net/product/cdn",
+          "access": "web, successful",
+          "evidence": {
+            "initialUSD": 20,
+            "initialTB": 5,
+            "advertisedMonthlyStartUSD": 20,
+            "tiers": [
+              {
+                "rangeTB": "0–499",
+                "USDPerTB": 4
+              },
+              {
+                "rangeTB": "500–1,999",
+                "USDPerTB": 3
+              },
+              {
+                "rangeTB": "2,000+",
+                "USDPerTB": 2
+              }
+            ],
+            "locations": 23,
+            "uniformRegionalPricing": true,
+            "video": "HLS caching"
+          },
+          "notes": "FAQ describes initial payment and monthly arrears. Another FAQ describes further usage at $4/TB without qualifying higher tiers."
+        },
+        {
+          "url": "https://global-cdn.fdcservers.net/",
+          "access": "web, successful",
+          "evidence": {
+            "initialUSD": 20,
+            "initialTB": 5,
+            "locations": 30,
+            "regions": [
+              "North America",
+              "South America",
+              "Europe",
+              "Asia"
+            ],
+            "video": [
+              "video files",
+              "streaming media"
+            ]
+          },
+          "notes": "Same tier table, with initial payment described as setup and later usage billed monthly in arrears."
+        }
+      ],
+      "conflicts": [
+        "Location counts disagree: primary product page 23, dedicated CDN page 30.",
+        "Monthly minimum is unclear: primary marketing says $20/month; both FAQs describe a $20 initial setup payment for 5 TB.",
+        "Tier calculation is unspecified: no conclusive marginal-versus-all-volume rule. This provider is not suitable for an automatic cross-tier cost estimate yet."
+      ],
+      "editorialPreserved": "Maintainer's own Cogent-only routing experience and improvement after the 2025 revamp adding NTT are preserved as first-person editorial, independent of current official facts.",
+      "corrections": [
+        "Retained initial price while exposing the actual billing ambiguity.",
+        "Removed unsupported historical 100 Tbps capacity figure.",
+        "Changed free-tier value to unknown because no trial terms were established."
+      ],
+      "unverified": [
+        "Trial or ongoing free-tier availability.",
+        "Historical upstream timeline is maintainer experience, not claimed as independently reverified.",
+        "Current per-ISP performance."
+      ]
+    }
+  ]
+}

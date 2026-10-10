@@ -1,0 +1,96 @@
+[
+  {
+    "slug": "cdn77",
+    "display": "330 Tbps",
+    "valueTbps": 330,
+    "metric": "global_network_capacity",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {"label": "CDN77 network", "url": "https://www.cdn77.com/network"},
+    "networkNote": "330 Tbps global network capacity; 50 Tbps private backbone.",
+    "notes": "Directly opened network, home, and cloud computing pages agree on 330 Tbps total capacity. The network page separately reports 85 Tbps daily traffic peak and 50 Tbps backbone capacity; neither should replace aggregate capacity. Search snippets still showing 310 Tbps / 40 Tbps were stale and were superseded by direct opens. No claim publication date is supplied.",
+    "checkedSources": [
+      {"url": "https://www.cdn77.com/network", "outcome": "Direct page: 330 Tbps network, 85 Tbps daily traffic peak, 50 Tbps global backbone."},
+      {"url": "https://www.cdn77.com/", "outcome": "330 Tbps global network capacity."},
+      {"url": "https://www.cdn77.com/products/cloud-computing", "outcome": "Direct page: 50 Tbps internal backbone and 330 Tbps total capacity."},
+      {"url": "https://www.cdn77.com/pricing", "outcome": "Search result independently advertises a 330 Tbps network."}
+    ]
+  },
+  {
+    "slug": "akamai",
+    "display": "1+ Pbps",
+    "valueTbps": 1000,
+    "metric": "edge_capacity_lower_bound",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {"label": "Akamai CDN overview", "url": "https://www.akamai.com/glossary/what-is-a-cdn"},
+    "networkNote": "1+ Pbps of edge capacity.",
+    "notes": "The official English CDN glossary explicitly writes 1+ Pbps edge capacity, supporting a lower bound of 1,000 Tbps. The global infrastructure page uses uppercase PBps, an inconsistent unit spelling; use the glossary's lowercase bit unit rather than interpreting the infrastructure page as 8 Pbps. No date is supplied for this claim. Edge delivery capacity, not Prolexic scrubbing capacity or observed traffic.",
+    "checkedSources": [
+      {"url": "https://www.akamai.com/why-akamai/global-infrastructure", "outcome": "1+ PBps edge capacity; uppercase unit conflicts in spelling with the official glossary, so this page is not the normalization source."},
+      {"url": "https://www.akamai.com/glossary/what-is-a-cdn", "outcome": "Explicit 1+ Pbps edge capacity on a directly opened current official page."},
+      {"url": "https://www.akamai.com/ja/glossary/what-is-a-cdn", "outcome": "Official Japanese search result also explicitly says edge capacity exceeds 1 Pbps."}
+    ]
+  },
+  {
+    "slug": "cachefly",
+    "display": "Not published",
+    "valueTbps": null,
+    "metric": "aggregate_delivery_capacity",
+    "status": "not_published",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {"label": "CacheFly network map", "url": "https://www.cachefly.com/network-map/"},
+    "networkNote": "Aggregate delivery capacity is not published in the reviewed materials.",
+    "notes": "Reviewed the official network map, homepage, about page, 2024 fact sheet, official peering site, and targeted searches for network capacity / Tbps / terabit. No precise aggregate installed delivery capacity was found. CacheFly-operated AS30081.net reports 20–50 Tbps as traffic, heavy outbound; this is a traffic range, not installed capacity. The 2018 founder article and generic gaming articles use hypothetical capacity examples, not a CacheFly total. Per-node throughput and more than one million concurrent viewers are also not aggregate bandwidth capacity.",
+    "checkedSources": [
+      {"url": "https://www.cachefly.com/network-map/", "outcome": "Network locations and architecture, no aggregate bandwidth capacity."},
+      {"url": "https://www.cachefly.com/about-us/", "outcome": "Company and network history, no total capacity number."},
+      {"url": "https://www.cachefly.com/", "outcome": "Dedicated capacity and measured throughput language, no aggregate total."},
+      {"url": "https://www.cachefly.com/wp-content/uploads/2024/03/CacheFly-Fact-Sheet.pdf", "outcome": "2024 company fact sheet gives PoP/customer counts, not bandwidth capacity."},
+      {"url": "https://www.as30081.net/", "outcome": "Official CacheFly peering site: traffic 20–50 Tbps, heavy outbound. Not capacity."},
+      {"url": "https://www.cachefly.com/news/scaling-with-cachefly-to-meet-high-gaming-demand/", "outcome": "Generic discussion of multi-terabit CDN capacity, no CacheFly-specific total."},
+      {"url": "https://medium.com/cachefly/why-cdn-capacity-numbers-dont-matter-6fcdbba96153", "outcome": "Founder Matt Levine's 2018-08-31 article criticizes aggregate capacity comparisons and uses hypothetical examples, not a disclosed CacheFly number."}
+    ]
+  },
+  {
+    "slug": "imperva",
+    "display": "13 Tbps scrubbing",
+    "valueTbps": 13,
+    "metric": "ddos_scrubbing_capacity",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {"label": "Imperva DDoS protection", "url": "https://www.imperva.com/products/ddos-protection-services/"},
+    "networkNote": "13 Tbps of DDoS scrubbing capacity.",
+    "notes": "The current product page explicitly calls the 13 Tbps number global scrubbing capacity, both for website and network DDoS protection. The global network map uses over 13 Tbps and 13 Tbps elsewhere on the same page; retain the product's 13 Tbps wording and metric. No separately scoped aggregate CDN delivery capacity was found. Older PDFs list 6 or 10 Tbps and are superseded by current pages.",
+    "checkedSources": [
+      {"url": "https://www.imperva.com/products/ddos-protection-services/", "outcome": "13 Tbps of global scrubbing capacity explicitly stated."},
+      {"url": "https://www.imperva.com/products/global-network-map/", "outcome": "60 DDoS-resilient data centers, over 13 Tbps; later 13 Tbps and multi-function PoP/scrubbing architecture description."},
+      {"url": "https://www.imperva.com/resources/datasheets/Imperva_DataProtectionForNetworks_Datasheet_2024.pdf", "outcome": "Older 10 Tbps DDoS figure, superseded by product page."},
+      {"url": "https://www.imperva.com/wp-content/uploads/2024/05/2023-ESG-Report.pdf", "outcome": "Historical 2023 network figure over 10 Tbps, not current capacity."}
+    ]
+  },
+  {
+    "slug": "cdnetworks",
+    "display": "200+ Tbps",
+    "valueTbps": 200,
+    "metric": "cdn_capacity_lower_bound",
+    "status": "verified",
+    "claimedAt": "2026-05-15",
+    "checkedAt": "2026-10-10",
+    "source": {"label": "CDNetworks media delivery overview", "url": "https://documents.cdnetworks.com/document/media-live-vod/overviewvod"},
+    "networkNote": "200+ Tbps of CDN capacity (May 2026 documentation).",
+    "notes": "Official Media Acceleration VoD documentation, last updated 2026-05-15, directly states total bandwidth capacity exceeding 200 Tbps. Current security site and indexed game solution/recent backup-CDN article corroborate 200+ Tbps CDN capacity. 20+ Tbps is a separate DDoS scrubbing capacity and must not be used as delivery capacity. The 10 Tbps South/Southeast Asia announcement is a 2024 regional capacity addition, not the global total. Network map is dated January 2026 and gives topology rather than global capacity.",
+    "checkedSources": [
+      {"url": "https://documents.cdnetworks.com/document/media-live-vod/overviewvod", "outcome": "Directly opened official documentation: exceeds 200 Tbps total bandwidth capacity; updated 2026-05-15."},
+      {"url": "https://www.cdnetworks.com/global-network-map/", "outcome": "Official network map updated January 2026, topology only."},
+      {"url": "https://security.cdnetworks.com/", "outcome": "Official indexed page distinguishes 200+ Tbps CDN capacity and 20+ Tbps scrubbing capacity."},
+      {"url": "https://www.cdnetworks.com/blog/web-performance/why-backup-cdn-is-a-must-have/", "outcome": "Official indexed article corroborates 200+ Tbps CDN capacity; no reliable publication date was recoverable, so use dated documentation as primary."},
+      {"url": "https://www.cdnetworks.com/news/10-tbps-capacity-upgrade-for-southeast-asia/", "outcome": "2024-05-15 additional 10 Tbps regional upgrade, not global capacity."},
+      {"url": "https://www.cdnetworks.com/products/ddos-mitigation/", "outcome": "20+ Tbps explicitly scrubbing capacity, distinct from CDN delivery."}
+    ]
+  }
+]

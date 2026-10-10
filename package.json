@@ -1,0 +1,21 @@
+{
+  "name": "cache-box",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An independent, evidence-led guide to content delivery networks.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --watch scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "preview:workers": "wrangler dev --local --ip 127.0.0.1 --port 8787",
+    "check:deploy": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.149.0"
+  }
+}

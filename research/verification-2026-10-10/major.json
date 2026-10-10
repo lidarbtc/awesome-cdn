@@ -1,0 +1,229 @@
+{
+  "reviewedAt": "2026-10-10",
+  "method": "Read current public official pricing, product, policy, and documentation pages. Review date is not the publication date of every source. No checkout, private quote, or network measurement was performed.",
+  "providers": [
+    {
+      "slug": "cloudflare",
+      "sources": [
+        {
+          "url": "https://www.cloudflare.com/plans/",
+          "sourceDate": null,
+          "facts": [
+            "Free $0/month; Pro $25 monthly or $20/month annually; Business $250 monthly or $200/month annually; Contract custom annual pricing."
+          ]
+        },
+        {
+          "url": "https://developers.cloudflare.com/fundamentals/reference/policies-compliances/delivering-videos-with-cloudflare/",
+          "sourceDate": null,
+          "facts": [
+            "Free, Pro, and Business video or disproportionate large-file delivery can trigger action without an appropriate paid service.",
+            "Recommended video options are Stream and Enterprise Stream Delivery."
+          ]
+        },
+        {
+          "url": "https://blog.cloudflare.com/500-tbps-of-capacity/",
+          "sourceDate": "2026-04-10",
+          "facts": [
+            "500 Tbps total provisioned external interconnection capacity, not peak delivered traffic."
+          ]
+        }
+      ],
+      "corrections": [
+        "Removed unsupported $5,000+ Enterprise entry price; added monthly versus annual prices.",
+        "Replaced the unsupported general APAC-routing statement with editorial advice to test visitor networks."
+      ],
+      "limits": [
+        "The April capacity announcement is historical; a newer equivalent capacity figure was not established."
+      ]
+    },
+    {
+      "slug": "bunny",
+      "sources": [
+        {
+          "url": "https://bunny.net/pricing/",
+          "sourceDate": null,
+          "facts": [
+            "$1/month minimum; no request fees; 14-day trial without credit card.",
+            "Standard rates: EU/NA 0.01, Asia/Oceania 0.03, South America 0.045, ME/Africa 0.06 USD/GB.",
+            "Volume: first 500 TB 0.005, 500 TB–1 PB 0.004, 1–2 PB 0.002 USD/GB; above 2 PB contact sales.",
+            "119 Standard and 10 Volume PoPs."
+          ]
+        },
+        {
+          "url": "https://bunny.net/docs/cdn/pricing",
+          "sourceDate": "2026-07-03",
+          "sourceDateType": "last modified",
+          "facts": [
+            "Same Standard and first two Volume prices, but 1–2 PB is 0.003 USD/GB.",
+            "Volume explicitly supports video streaming, software delivery, and large downloads."
+          ]
+        },
+        {
+          "url": "https://bunny.net/network/",
+          "sourceDate": null,
+          "facts": [
+            "250+ Tbps global backbone; Standard and Volume location list."
+          ]
+        }
+      ],
+      "conflicts": [
+        "Official marketing pricing says $0.002/GB for 1–2 PB; official documentation says $0.003/GB. No single definitive price was established for this band."
+      ],
+      "corrections": [
+        "Removed the definitive 1–2 PB rate from display; pricing verification is partial."
+      ],
+      "limits": [
+        "Do not extrapolate an exact Volume estimate above 1 PB until the conflicting prices are resolved.",
+        "The reviewed table labels do not explicitly establish whether volume discounts apply marginally or retroactively to all monthly traffic."
+      ]
+    },
+    {
+      "slug": "gcore",
+      "sources": [
+        {
+          "url": "https://gcore.com/pricing/edge-network",
+          "sourceDate": null,
+          "facts": [
+            "CDN PAYG €0/month with 1 TB/month included, then €0.01/GB; VAT excluded.",
+            "Requests over 1 billion billed €0.75 per million; Enterprise custom.",
+            "PAYG lists basic L3/L4 DDoS; WAAP and live streaming are on-demand."
+          ]
+        },
+        {
+          "url": "https://gcore.com/cdn",
+          "sourceDate": null,
+          "facts": [
+            "210+ PoPs, 200+ Tbps; live and VOD delivery supported.",
+            "General FAQ says L3/L4/L7 and next-gen WAF across all plans."
+          ]
+        }
+      ],
+      "conflicts": [
+        "General product FAQ says L7/WAF included across all plans, while the pricing table lists basic L3/L4 and WAAP on-demand. Display uses the specific pricing-table scope."
+      ],
+      "corrections": [
+        "Replaced old Free/Start/Pro $37/$105 subscription structure and old overage prices with current PAYG/Enterprise pricing.",
+        "Currency is EUR as rendered by the official pricing page; no USD conversion was inferred."
+      ],
+      "limits": [
+        "Security inclusion beyond the pricing-table wording requires clarification."
+      ]
+    },
+    {
+      "slug": "fastly",
+      "sources": [
+        {
+          "url": "https://www.fastly.com/pricing",
+          "sourceDate": null,
+          "facts": [
+            "Full Site Delivery: 100 GB and 1 million requests free monthly.",
+            "First paid tier to 10 TB: $0.12–0.28/GB; EU/NA $0.12, South Korea $0.28. Next 10 TB: $0.08–0.24/GB.",
+            "Requests above 1 million start $0.01/10,000; custom high-volume pricing available."
+          ]
+        },
+        {
+          "url": "https://www.fastly.com/network-map",
+          "sourceDate": "2026-06-30",
+          "sourceDateType": "capacity and map last updated",
+          "facts": [
+            "622 Tbps connected global capacity; Seoul listed."
+          ]
+        },
+        {
+          "url": "https://www.fastly.com/products/streaming-media/video-on-demand",
+          "sourceDate": null,
+          "facts": [
+            "VOD caching and delivery product available."
+          ]
+        },
+        {
+          "url": "https://www.fastly.com/products/live-streaming",
+          "sourceDate": null,
+          "facts": [
+            "Live delivery supports HLS and MPEG-DASH."
+          ]
+        }
+      ],
+      "corrections": [
+        "Headline now shows first paid tier rates, instead of presenting the lower next-tier price as the starting rate."
+      ],
+      "limits": [
+        "Private enterprise discounts and streaming-specific quoted rates were not established."
+      ]
+    },
+    {
+      "slug": "cloudfront",
+      "sources": [
+        {
+          "url": "https://aws.amazon.com/cloudfront/pricing/",
+          "sourceDate": null,
+          "facts": [
+            "Flat-rate monthly plans per distribution: Free $0, Pro $15, Business $200, Premium $1,000.",
+            "Free includes 100 GB/1M requests; Pro 50 TB/10M; Business 50 TB/125M; Premium starts 50 TB/500M with higher configurable allowances."
+          ]
+        },
+        {
+          "url": "https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/",
+          "sourceDate": null,
+          "facts": [
+            "Always Free PAYG allowance: 1 TB transfer and 10M HTTP/HTTPS requests per month.",
+            "Bandwidth and request rates vary by region and tier."
+          ]
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/flat-rate-pricing-plan.html",
+          "sourceDate": null,
+          "facts": [
+            "No annual commitment or overage fees.",
+            "Sustained or unusually large excess use can cause delivery adjustments, including fewer or more distant edges. First spike up to 3x allowance has a one-time accommodation."
+          ]
+        },
+        {
+          "url": "https://aws.amazon.com/cloudfront/features/",
+          "sourceDate": null,
+          "facts": [
+            "750+ PoPs in 100+ cities/50+ countries plus 1,140+ embedded PoPs in 300+ cities within ISP networks."
+          ]
+        },
+        {
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/on-demand-streaming-video.html",
+          "sourceDate": null,
+          "facts": [
+            "Supports VOD and live streaming using HTTP origins; encoded/packaged media is required."
+          ]
+        }
+      ],
+      "conflicts": [
+        "Some prose examples on the PAYG page mention a 20M request allowance, but its explicit Always Free list and repeated pricing tables use 10M. The entry uses the explicit allowance."
+      ],
+      "corrections": [
+        "Made PAYG and flat-rate allowances distinct; included Pro's current 50 TB allowance and flat-rate performance adjustments."
+      ],
+      "limits": [
+        "Full regional usage tiers and optional features are not represented by a single headline rate."
+      ]
+    }
+  ],
+  "supplementalReview": {
+    "provider": "bunny",
+    "reviewedAt": "2026-10-10",
+    "trial": {
+      "url": "https://bunny.net/docs/faq",
+      "fact": "Trial ends after 14 days or credit exhaustion: $20 without a card, $50 with a card."
+    },
+    "volumeBilling": {
+      "sources": [
+        "https://bunny.net/docs/cdn/pricing",
+        "https://bunny.net/faq/",
+        "https://bunny.net/docs/billing/billing-history"
+      ],
+      "finding": "No explicit marginal-versus-whole-usage discount method established. Exact calculator estimates stop above 500 TB; 1–2 PB rates also conflict."
+    }
+  },
+  "maintainerPricingNote": {
+    "provider": "cloudflare",
+    "date": "2026-10-10",
+    "statement": "Enterprise starts at about $5,000/month, according to the maintainer.",
+    "basis": "Direct user correction; experience/opinion, not an official public minimum."
+  }
+}

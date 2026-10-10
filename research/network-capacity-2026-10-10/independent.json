@@ -1,0 +1,183 @@
+[
+  {
+    "slug": "keycdn",
+    "display": "Not published",
+    "valueTbps": null,
+    "metric": "Aggregate CDN network capacity",
+    "status": "not_published",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "KeyCDN network",
+      "url": "https://www.keycdn.com/network"
+    },
+    "networkNote": "At least 40 Gbps uplinks per edge server; no aggregate capacity published.",
+    "notes": "The live official network page explicitly specifies at least 40 Gbps uplinks for each edge server. This is a per-server figure and must not be multiplied by locations or treated as global capacity. Focused searches for KeyCDN aggregate capacity/Tbps did not establish a vendor-wide number.",
+    "checkedSources": [
+      {
+        "url": "https://www.keycdn.com/network",
+        "outcome": "Read live via direct HTTPS; per-edge-server 40 Gbps minimum, no aggregate throughput."
+      },
+      {
+        "url": "https://www.keycdn.com/pricing",
+        "outcome": "Usage-based traffic allowances and prices; no aggregate network capacity."
+      }
+    ]
+  },
+  {
+    "slug": "belugacdn",
+    "display": "Not published",
+    "valueTbps": null,
+    "metric": "Aggregate CDN network capacity",
+    "status": "not_published",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "BelugaCDN network features",
+      "url": "https://www.belugacdn.com/doc/BelugaCDN.Key.Features.v2.1.1.pdf"
+    },
+    "networkNote": "Aggregate capacity undisclosed; the network brochure lists 10G and 100G exchange links.",
+    "notes": "The official feature PDF describes multiple 10G and 100G links to exchanges, not total CDN capacity. Its exact publication date was not established, so those ports should not be presented as a current capacity total. Live homepage and targeted capacity searches did not establish an aggregate Tbps number.",
+    "checkedSources": [
+      {
+        "url": "https://www.belugacdn.com/",
+        "outcome": "Read live; coverage and product information but no total Tbps figure."
+      },
+      {
+        "url": "https://www.belugacdn.com/doc/BelugaCDN.Key.Features.v2.1.1.pdf",
+        "outcome": "Official two-page brochure: multiple 10G and 100G world-exchange links; no summed capacity."
+      },
+      {
+        "url": "https://www.belugacdn.com/network/",
+        "outcome": "HTTP 404 on live check."
+      },
+      {
+        "url": "https://www.belugacdn.com/network-map/",
+        "outcome": "HTTP 404 on live check."
+      },
+      {
+        "url": "https://www.belugacdn.com/blog/cdn/why-your-website-needs-content-delivery-network/",
+        "outcome": "Historical vendor network description gives PoPs and SuperPoPs but no aggregate throughput."
+      }
+    ]
+  },
+  {
+    "slug": "ddos-guard",
+    "display": "4+ Tbps scrubbing",
+    "valueTbps": 4,
+    "metric": "DDoS scrubbing network capacity",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "DDoS-Guard company network",
+      "url": "https://ddos-guard.net/about-us"
+    },
+    "networkNote": "4+ Tbps scrubbing capacity; checked October 2026.",
+    "notes": "The live official About page reports 4+ Tbps scrubbing network capacity. The homepage rounds this to 4 Tbps and its FAQ says up to 4 Tbps. This is attack-scrubbing capacity, not an independently stated CDN delivery capacity. Web retrieval failed but direct HTTPS successfully returned the official HTML.",
+    "checkedSources": [
+      {
+        "url": "https://ddos-guard.net/about-us",
+        "outcome": "Live official HTML explicitly reports 4+ Tbps scrubbing network capacity."
+      },
+      {
+        "url": "https://ddos-guard.net/",
+        "outcome": "Live official HTML reports 4 Tbps scrubbing and FAQ up to 4 Tbps."
+      },
+      {
+        "url": "https://www.linkedin.com/posts/ddos-guard_protectednetwork-scrubbinghub-ddghub-activity-6808011431888384000-oRJ7",
+        "outcome": "Older official company announcement reported 3.2 Tbps scrubbing; superseded by current 4+ about-page claim."
+      }
+    ]
+  },
+  {
+    "slug": "blazingcdn",
+    "display": "10+ Tbps (historical)",
+    "valueTbps": 10,
+    "metric": "CDN network capacity",
+    "status": "historical",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "BlazingCDN former enterprise page",
+      "url": "https://blazingcdn.com/lp-cdn-enterprise/"
+    },
+    "networkNote": "Current aggregate capacity unconfirmed.",
+    "notes": "The web tool retrieved an older indexed official enterprise page explicitly showing 10 Tbps+ Network Capacity under CDN Network with Global Private Backbone. The same page also said 5 Tbps+ elsewhere; these lower bounds are compatible, not inherently conflicting. A live direct HTTPS check returned HTTP 404 for this former landing page. Current homepage, Performance Metrics and About pages do not publish a total capacity. Preserve this as a historical vendor claim with unknown publication date rather than silently deleting it or labeling it current. The index crawl age is not a publication date. A bounded follow-up found no accessible primary source suitable for public citation: the older broadcasting URL redirects to a rewritten page without the figure; the live OTT page has also removed it; the Wayback availability API returned no snapshot for the former enterprise URL. Keep 10+ Tbps in research only and display current aggregate capacity unconfirmed on the site/README until an accessible historical primary source is available.",
+    "checkedSources": [
+      {
+        "url": "https://blazingcdn.com/lp-cdn-enterprise/",
+        "outcome": "Indexed official page shows 10 Tbps+ global network capacity and 5 Tbps+ lower down; live direct request now HTTP 404."
+      },
+      {
+        "url": "https://blazingcdn.com/",
+        "outcome": "Live current homepage: no aggregate Tbps claim."
+      },
+      {
+        "url": "https://blazingcdn.com/performance-metrics/",
+        "outcome": "Live page lists locations/performance; no aggregate capacity figure."
+      },
+      {
+        "url": "https://blazingcdn.com/about/",
+        "outcome": "Live company page describes owned infrastructure but no aggregate capacity."
+      },
+      {
+        "url": "https://blazingcdn.com/broadcasting-solutions/",
+        "outcome": "Search index retained 10Tbps+ text, but live request redirects to https://blazingcdn.com/tv-online-broadcasters-cdn/ whose current content has no total capacity."
+      },
+      {
+        "url": "https://blazingcdn.com/ott-vod-streaming-cdn/",
+        "outcome": "Search index retained 10Tbps+ text, but live page no longer contains total capacity."
+      },
+      {
+        "url": "https://archive.org/wayback/available?url=blazingcdn.com/lp-cdn-enterprise/&timestamp=20260101",
+        "outcome": "Wayback availability response contained an empty archived_snapshots object."
+      }
+    ]
+  },
+  {
+    "slug": "fdcservers",
+    "display": "100+ Tbps infrastructure",
+    "valueTbps": 100,
+    "metric": "Provider-wide installed external network capacity",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "FDCServers official network engineering job posting",
+      "url": "https://my.linkedin.com/jobs/view/network-engineer-l2-carrier-service-provider-operations-juniper-at-fdcservers-net-4435030075"
+    },
+    "networkNote": "100+ Tbps installed external capacity across FDC infrastructure; checked October 2026.",
+    "notes": "FDCServers' own 2026 LinkedIn job posting explicitly reports over 100 Tbps of installed external network capacity across its international backbone. Live direct HTTPS and web retrieval both confirm the statement. It covers dedicated servers, colocation and IP transit infrastructure, not a dedicated CDN-only capacity pool. Exact posting date was not established from the primary page, so claimedAt is null. Its live main website separately reports 10.1 Tbps average continuous usage, which must not be substituted for capacity. The 50+ Tbps backbone claim still on the regional official reseller page is compatible with the stronger 100+ lower bound and does not establish a decline.",
+    "checkedSources": [
+      {
+        "url": "https://my.linkedin.com/jobs/view/network-engineer-l2-carrier-service-provider-operations-juniper-at-fdcservers-net-4435030075",
+        "outcome": "Live employer-authored job description: over 100 Tbps installed external network capacity; international backbone across 27+ PoPs."
+      },
+      {
+        "url": "https://ph.linkedin.com/jobs/view/senior-network-administrator-at-fdcservers-net-4428097483",
+        "outcome": "Another vendor job posting corroborates 100+ Tbps installed capacity."
+      },
+      {
+        "url": "https://fdcservers.net/unmetered-bandwidth-for-global-dedicated-servers-vps-colocation-and-ip-transit",
+        "outcome": "10.1 Tbps is average continuous usage, not installed capacity."
+      },
+      {
+        "url": "https://fdcservers.net/product/cdn",
+        "outcome": "Live CDN product page describes global service but no CDN-only capacity."
+      },
+      {
+        "url": "https://fdcservers.net/product/ip-transit",
+        "outcome": "Official page distinguishes owned backbone and upstream/partner transit; 10/100/400 Gbps are port sizes."
+      },
+      {
+        "url": "https://www.fdcservers.cz/en/",
+        "outcome": "Regional official site still publishes access to a 50+ Tbps Internet backbone; lower bound, no inferred capacity reduction."
+      },
+      {
+        "url": "https://fdcservers.net/about-us",
+        "outcome": "Live company page describes infrastructure history and 400 Gbps servers, but no aggregate Tbps figure."
+      }
+    ]
+  }
+]

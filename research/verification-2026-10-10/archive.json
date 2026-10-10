@@ -1,0 +1,88 @@
+{
+  "reviewedAt": "2026-10-10",
+  "scope": "Archived CDN service status; no historical price or capacity claims retained without primary support.",
+  "providers": [
+    {
+      "slug": "stackpath",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://www.akamai.com/newsroom/press-release/akamai-acquires-stackpath-cdn-customers",
+          "publisher": "Akamai",
+          "publishedAt": "2023-08-24",
+          "access": "opened",
+          "supports": [
+            "StackPath decided to cease CDN operations.",
+            "Akamai acquired approximately 100 enterprise customer contracts; technology and personnel were excluded.",
+            "The parties announced a 90-day transition services agreement."
+          ]
+        }
+      ],
+      "limitations": [
+        "The official notice does not establish an exact CDN shutdown date; no November 22 date is asserted.",
+        "Historical prices, capacity and feature claims were not verified and were removed from the website override."
+      ]
+    },
+    {
+      "slug": "edgio",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://www.akamai.com/newsroom/press-release/akamai-completes-acquisition-of-select-assets-of-edgio",
+          "publisher": "Akamai",
+          "publishedAt": "2024-12-13",
+          "access": "opened",
+          "supports": [
+            "Acquisition completed for selected customer contracts and non-exclusive patent rights.",
+            "The transaction excluded Edgio personnel, technology and network assets."
+          ]
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/previous-versions/azure/cdn/edgio-retirement-faq",
+          "publisher": "Microsoft Learn",
+          "updatedAt": "2025-01-03",
+          "access": "opened; article body available despite a generic authorization banner",
+          "supports": [
+            "Microsoft's official service retirement FAQ lists January 15, 2025 as the Edgio platform shutdown date.",
+            "The FAQ says Microsoft was informed that the Edgio platform would end service on that date."
+          ]
+        },
+        {
+          "url": "https://www.akamai.com/newsroom/press-release/bankruptcy-court-approves-winning-akamai-bid-for-edgio-assets",
+          "publisher": "Akamai",
+          "publishedAt": "2024-11-26",
+          "access": "opened",
+          "supports": [
+            "Akamai announced funding for transition and wind-down until the planned mid-January 2025 end of Edgio CDN operations."
+          ]
+        }
+      ],
+      "limitations": [
+        "https://devblogs.microsoft.com/azure-sdk/azd-cdn-changing-january-2025/ returned HTTP 403 on direct open; it is not used as the website evidence link.",
+        "The January 15 date is attributed to Microsoft's platform retirement notice; this is not a claim about dissolution of the legal entity.",
+        "Historical pricing, free-plan policy, capacity and video-plan claims were not verified and were removed from the website override."
+      ]
+    },
+    {
+      "slug": "lumen-cdn",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://ir.lumen.com/news/news-details/2023/Lumen-announces-sale-of-select-CDN-customer-contracts-to-Akamai/default.aspx",
+          "publisher": "Lumen Technologies",
+          "publishedAt": "2023-10-10",
+          "access": "opened",
+          "supports": [
+            "Lumen completed the sale of selected CDN customer contracts to Akamai.",
+            "Lumen announced a 90-day transition, followed by planned wind-down of its content delivery services."
+          ]
+        }
+      ],
+      "limitations": [
+        "The announcement describes a planned wind-down after the transition; no exact operational shutdown date is inferred.",
+        "The CDN wind-down does not imply closure of Lumen as a company.",
+        "Historical prices, capacity and feature claims were not verified and were removed from the website override."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+[
+  {
+    "slug": "cloudflare",
+    "display": "534 Tbps",
+    "valueTbps": 534,
+    "metric": "Global network capacity, as published on the Magic Transit product page",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Cloudflare Magic Transit",
+      "url": "https://www.cloudflare.com/network-services/products/magic-transit/"
+    },
+    "networkNote": "534 Tbps of global network capacity, published on Cloudflare's Magic Transit page.",
+    "notes": "Primary official product page explicitly refers to the Cloudflare global network and publishes 534 Tbps of network capacity, with no figure-specific date or further metric definition. It does not explicitly call the 534 Tbps number external interconnection or scrubbing capacity. Separately, Cloudflare's April 10, 2026 engineering post defines its then-current 500 Tbps milestone as provisioned external interconnection ports facing transit, private peering, IXs and CNI; that older definition must not be transferred automatically to the 534 Tbps claim. Some older official pages retain smaller figures. Do not relabel 534 Tbps as simultaneous content-delivery throughput or a measured DDoS attack size.",
+    "checkedSources": [
+      {
+        "url": "https://www.cloudflare.com/network/",
+        "outcome": "Opened the current official network page; its extracted content lists cities and interconnections but no capacity total."
+      },
+      {
+        "url": "https://www.cloudflare.com/network-services/products/magic-transit/",
+        "outcome": "Opened the official product page and confirmed 534 Tbps of network capacity. No capacity date is stated."
+      },
+      {
+        "url": "https://blog.cloudflare.com/500-tbps-of-capacity/",
+        "outcome": "Opened official engineering post dated 2026-04-10: crossed 500 Tbps of external capacity; defines provisioned external interconnection and explicitly distinguishes peak utilization."
+      },
+      {
+        "url": "https://www.cloudflare.com/press/press-kit/",
+        "outcome": "Opened official press kit; no Tbps figure in extracted page."
+      }
+    ]
+  },
+  {
+    "slug": "bunny",
+    "display": "250+ Tbps",
+    "valueTbps": 250,
+    "metric": "Published global network/backbone capacity",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Bunny global network",
+      "url": "https://bunny.net/network/"
+    },
+    "networkNote": "250+ Tbps of published network capacity, also described as global backbone capacity.",
+    "notes": "Primary official network page calls the figure global backbone capacity; CDN product page calls it network capacity. The number is company-reported and not a measured per-customer delivery rate. Do not assign the full network figure to the smaller Volume network: no separate aggregate capacity for that tier was found. Current pages do not state a figure-specific date; an official May 27, 2026 partnership post also publishes the same 250 Tbps+ backbone figure.",
+    "checkedSources": [
+      {
+        "url": "https://bunny.net/network/",
+        "outcome": "Opened official network page: 250 Tbps+ headline and 250 Tbps+ global backbone."
+      },
+      {
+        "url": "https://bunny.net/cdn/",
+        "outcome": "Opened official CDN page: 250 Tbps+ Network Capacity."
+      },
+      {
+        "url": "https://bunny.net/blog/stackit-and-bunny-net-partner-to-offer-fast-private-regulation-ready-content-delivery/",
+        "outcome": "Opened official post dated 2026-05-27: global edge network backed by 250 Tbps+ backbone capacity."
+      }
+    ]
+  },
+  {
+    "slug": "gcore",
+    "display": "200+ Tbps",
+    "valueTbps": 200,
+    "metric": "Published total global network capacity",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Gcore Edge Network",
+      "url": "https://gcore.com/edge-network"
+    },
+    "networkNote": "200+ Tbps of published global network capacity.",
+    "notes": "Primary official Edge Network and infrastructure pages still publish 200+ Tbps. No figure-specific update date is supplied. A targeted search surfaced a February 4, 2026 attributed interview reporting an intended 65 Tbps expansion in H1 2026; this is a plan and has not been added to the verified figure. The company-wide network capacity is not a throughput commitment for a plan, location or customer.",
+    "checkedSources": [
+      {
+        "url": "https://gcore.com/network",
+        "outcome": "Opened the official network map; its extracted content did not expose a 200/Tbps capacity value."
+      },
+      {
+        "url": "https://gcore.com/edge-network",
+        "outcome": "Opened official platform page: Global network section publishes 200+ Tbps network capacity."
+      },
+      {
+        "url": "https://gcore.com/infrastructure",
+        "outcome": "Opened official infrastructure page; publishes 200+ Tbps network."
+      }
+    ]
+  },
+  {
+    "slug": "fastly",
+    "display": "622 Tbps",
+    "valueTbps": 622,
+    "metric": "Connected global network capacity",
+    "status": "verified",
+    "claimedAt": "2026-06-30",
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Fastly network map",
+      "url": "https://www.fastly.com/network-map"
+    },
+    "networkNote": "622 Tbps of connected global capacity, updated June 30, 2026.",
+    "notes": "Primary official network map explicitly names the metric connected global capacity and dates it 2026-06-30. The current number supersedes 587 Tbps as of March 31, 2026 and 532 Tbps as of December 31, 2025. It is installed/connected capacity, not actual traffic throughput or a per-customer service limit.",
+    "checkedSources": [
+      {
+        "url": "https://www.fastly.com/network-map",
+        "outcome": "Opened official network map: 622 Tbps connected global capacity; capacity last updated June 30, 2026."
+      }
+    ]
+  },
+  {
+    "slug": "cloudfront",
+    "display": "Hundreds of Tbps",
+    "valueTbps": null,
+    "metric": "Deployed global network capacity, approximate only",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Amazon CloudFront features",
+      "url": "https://aws.amazon.com/cloudfront/features/"
+    },
+    "networkNote": "Hundreds of Tbps of deployed capacity; AWS does not give an exact total on the current feature page.",
+    "notes": "Primary official CloudFront feature page says hundreds of terabits of deployed capacity. Retain this approximate wording rather than inventing an exact number. An official post published 2025-11-14 reports 268 Tbps delivered on 2025-11-01; that is a traffic peak, not provisioned network capacity. Separate AWS-wide DDoS mitigation figures and 400 GbE link speeds must not be treated as CloudFront CDN capacity.",
+    "checkedSources": [
+      {
+        "url": "https://aws.amazon.com/cloudfront/features/",
+        "outcome": "Opened official feature page: Network Connectivity and Backbone section says hundreds of terabits of deployed capacity; exact aggregate not stated."
+      },
+      {
+        "url": "https://aws.amazon.com/blogs/aws-insights/powering-the-worlds-largest-events-how-amazon-cloudfront-delivers-at-scale/",
+        "outcome": "Opened official post published 2025-11-14: 268 Tbps traffic peak occurred on 2025-11-01. Excluded as a capacity total."
+      }
+    ]
+  }
+]

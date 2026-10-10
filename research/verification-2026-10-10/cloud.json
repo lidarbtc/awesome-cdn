@@ -1,0 +1,163 @@
+{
+  "reviewedAt": "2026-10-10",
+  "method": "Opened official product, pricing, billing and policy pages with the web tool. No purchases, logins, account provisioning or performance measurements.",
+  "providers": [
+    {
+      "slug": "byteplus",
+      "sources": [
+        {
+          "url": "https://docs.byteplus.com/en/docs/byteplus-cdn/docs-pricing",
+          "status": "opened",
+          "pageUpdatedAt": "2026-06-30",
+          "sections": ["Billing Items", "Billing Details (Pay-as-you-go)", "Pricing for Data Transferred from CDN to the Client", "Promotions"],
+          "evidence": "Traffic uses decimal GB. Region tiers accumulate monthly; settlement is hourly. Introductory packages expire after 30 days. Request, upstream transfer and logging charges are distinct.",
+          "details": { "batchLogsUsdPer10000": 0.001, "streamingLogsUsdPer10000": 0.0015 }
+        },
+        {
+          "url": "https://www.byteplus.com/en/product/cdn",
+          "status": "opened",
+          "sections": ["Global Points of Presence (PoPs)", "Network capacity", "Application scenarios"],
+          "evidence": "Public product page confirms global footprint and live/recorded media delivery. Numeric network claims are publisher claims, not measurements."
+        },
+        {
+          "url": "https://docs.byteplus.com/en/docs/byteplus-cdn/docs-origin-configurations",
+          "status": "opened",
+          "pageUpdatedAt": "2026-08-28",
+          "sections": ["Scenario 3: Bucket is from AWS or other cloud providers"],
+          "evidence": "Private AWS/S3-compatible storage origins can use signed origin requests with supplied read-only credentials."
+        }
+      ],
+      "corrections": ["Added trial expiry and previously omitted edge-to-origin charge.", "Replaced ambiguous global starting price with a named US/EU starting tier.", "Confirmed video support and footprint through the product page."],
+      "limitations": ["Savings-plan purchase prices may differ from published standard rates; plan pricing is not used by the local calculator.", "Product page states 70+ locations/regions; overview search results state 1,300+ nodes. These are different measures and are not combined."],
+      "accessIssues": [
+        { "url": "https://docs.byteplus.com/en/docs/byteplus-cdn/docs-product-overview", "result": "Internal fetch error; guessed path not used as evidence." },
+        { "url": "https://docs.byteplus.com/en/docs/byteplus-cdn/docs-overview-of-byteplus-cdn", "result": "Only JavaScript shell returned. Product page used instead." },
+        { "url": "https://docs.byteplus.com/api/docs/byteplus-cdn/docs-overview-of-byteplus-cdn", "result": "Inconsistent extraction: one response showed overview text, another only app shell. Not used as active source." }
+      ]
+    },
+    {
+      "slug": "google-cloud-cdn",
+      "sources": [
+        {
+          "url": "https://cloud.google.com/cdn/pricing",
+          "status": "opened",
+          "sections": ["Pricing structure", "Cache data transfer out", "Cache fill", "Pricing notes"],
+          "evidence": "Published USD prices use GiB/TiB. Destination tiers apply per project. Misses can add backend processing, and requests sent to external origins incur internet egress charges."
+        },
+        {
+          "url": "https://cloud.google.com/vpc/network-pricing",
+          "status": "opened",
+          "sections": ["Global forwarding rules", "Forwarding rules pricing examples"],
+          "evidence": "The first five global forwarding rules share a $0.025/hour charge per project. Additional rules cost $0.01/hour each. Regional and global rules are charged independently."
+        },
+        {
+          "url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+          "status": "opened",
+          "sections": ["Google Cloud Free Trial", "Who's eligible", "Free Tier"],
+          "evidence": "$300 introductory credit expires after 90 days. Eligibility requires no previous paid Google Cloud/Maps/Firebase use and no earlier trial. The recurring free product list does not include Cloud CDN."
+        },
+        {
+          "url": "https://docs.cloud.google.com/cdn/docs/overview",
+          "status": "opened",
+          "sections": ["Cloud CDN overview", "Global Front End"],
+          "evidence": "Cloud CDN is integrated with the global external or classic Application Load Balancer. Global Front End Enterprise also offers unified pricing; displayed rates cover standalone CDN pricing."
+        },
+        {
+          "url": "https://docs.cloud.google.com/cdn/docs/caching",
+          "status": "opened",
+          "sections": ["Static content"],
+          "evidence": "video/* is an explicitly supported cacheable MIME type subject to normal cacheability requirements."
+        },
+        {
+          "url": "https://docs.cloud.google.com/cdn/docs/choose-cdn-product",
+          "status": "opened",
+          "sections": ["Use cases", "Exceptions"],
+          "evidence": "Media CDN is recommended for large streaming workloads. Cloud CDN and Media CDN do not deliver RTMP or WebRTC directly."
+        }
+      ],
+      "corrections": ["Made the price label region-specific and retained binary units.", "Added an actual hourly forwarding-rule charge and trial expiry.", "Confirmed video caching while distinguishing the separate Media CDN product."],
+      "limitations": ["Displayed fee components are not a full account quote; backend processing, Cloud Armor, logging and external-origin charges depend on setup.", "No capacity number is asserted, and no ISP routing measurement was performed."],
+      "accessIssues": []
+    },
+    {
+      "slug": "azure-front-door",
+      "sources": [
+        {
+          "url": "https://azure.microsoft.com/en-us/pricing/details/frontdoor/",
+          "status": "opened",
+          "sections": ["Base fees", "Outbound Data Transfer from Edge to the Client", "Outbound Data Transfer from Edge to the Origin", "Request Pricing"],
+          "evidence": "Current Standard/Premium USD table distinguishes client transfer, upstream transfer and tier-specific requests; Korea has a separate billing zone.",
+          "details": { "edgeToOriginUsdPerGb": { "northAmericaEurope": 0.02, "korea": 0.16 }, "premiumRequestsUsdPer10000": { "northAmericaEurope": 0.015, "korea": 0.0241 } }
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/frontdoor/billing",
+          "status": "opened",
+          "sections": ["Base fees", "Data transfer from origin to Front Door"],
+          "evidence": "Base fee accrues per profile per whole or partial deployed hour, with no extra endpoint fee. Front Door does not meter origin-to-edge traffic; non-Azure origins may charge egress independently."
+        },
+        {
+          "url": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account",
+          "status": "opened",
+          "sections": ["Azure free account"],
+          "evidence": "New Azure customers can use a single $200 credit across Azure services for 30 days. This is not an ongoing Front Door allowance."
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/frontdoor/edge-locations-by-region",
+          "status": "opened",
+          "pageUpdatedAt": "2025-09-25",
+          "sections": ["Microsoft POP locations"],
+          "evidence": "Region-specific official inventory lists Seoul and gives a current total of 192 edge locations in 109 metros."
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/azure/frontdoor/video-on-demand-live-streaming",
+          "status": "opened",
+          "sections": ["Delivering video on-demand and live streaming", "Infrastructure considerations"],
+          "evidence": "Official configuration guidance supports VOD/live delivery and documents streaming infrastructure requirements."
+        }
+      ],
+      "corrections": ["Replaced unknown free-offer status with explicitly scoped Azure account credit.", "Confirmed video support and published network inventory.", "Added regional traffic/request context and hourly base-fee behavior."],
+      "limitations": ["Rate card calls its unit GB. The reviewed Front Door pages do not define GB in bytes; no decimal/binary conversion is inferred.", "The generic product overview and detailed location inventory show different footprint totals. The more specific inventory is used.", "The inventory includes an authorization notice but its public article body was readable. Its US Government text and table counts also differ, so no numeric Government footprint is repeated."],
+      "accessIssues": [
+        { "url": "https://learn.microsoft.com/en-us/azure/frontdoor/edge-locations", "result": "Inaccessible old path; replaced with edge-locations-by-region." }
+      ]
+    },
+    {
+      "slug": "sucuri",
+      "sources": [
+        {
+          "url": "https://sucuri.net/website-firewall/",
+          "status": "opened",
+          "sections": ["Basic Firewall", "Pro Firewall", "CDN Speed Enhancement"],
+          "evidence": "Current Firewall plan table lists monthly Basic/Pro prices, one site each, and Anycast CDN delivery."
+        },
+        {
+          "url": "https://sucuri.net/website-firewall-a/free-trial/",
+          "status": "opened",
+          "sections": ["Try Sucuri’s Website Firewall Free for 30 Days"],
+          "evidence": "An explicit 30-day Firewall trial is advertised; this is distinct from the separate refund guarantee. Signup was not performed."
+        },
+        {
+          "url": "https://sucuri.net/website-security-platform/signup/",
+          "status": "opened",
+          "sections": ["Firewall", "Bandwidth Limit", "Monthly Pricing"],
+          "evidence": "Detailed Firewall table advertises unlimited bandwidth and repeats monthly Basic/Pro pricing."
+        },
+        {
+          "url": "https://sucuri.net/faq/",
+          "status": "opened",
+          "sections": ["Does this plan include malware cleanup?"],
+          "evidence": "Firewall-only plans exclude malware cleanup, which requires the Website Security Platform. No video-delivery policy was found."
+        },
+        {
+          "url": "https://sucuri.net/terms/",
+          "status": "opened",
+          "sections": ["Fees and Payment", "Auto-Renewal", "Termination"],
+          "evidence": "General terms discuss annual packages and automatic renewal. Searches for bandwidth and streaming found no explicit limits."
+        }
+      ],
+      "corrections": ["Confirmed 30-day trial, replacing unknown status.", "Kept the advertised monthly Firewall rate separate from annual Security Platform packages.", "Removed the implication that video delivery was allowed by an unlimited-bandwidth claim."],
+      "limitations": ["No explicit streaming/video policy, bandwidth fair-use threshold, aggregate network capacity or current location inventory was established.", "Pricing is the advertised monthly amount; checkout and account-specific renewal terms were not tested. The general terms refer to annual packages, while the Firewall table explicitly labels Monthly Pricing."],
+      "accessIssues": []
+    }
+  ]
+}

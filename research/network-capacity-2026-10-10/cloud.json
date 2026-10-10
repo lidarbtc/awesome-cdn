@@ -1,0 +1,166 @@
+[
+  {
+    "slug": "byteplus",
+    "display": "120+ Tbps",
+    "valueTbps": 120,
+    "metric": "CDN network bandwidth capacity",
+    "status": "verified",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "BytePlus CDN network capacity",
+      "url": "https://www.byteplus.com/en/product/cdn"
+    },
+    "networkNote": "120+ Tbps of CDN bandwidth capacity.",
+    "notes": [
+      "The current official product page explicitly advertises over 120 Tbps under Network capacity. valueTbps is the advertised lower bound, not an exact total or measured throughput.",
+      "The page does not date the capacity claim; checkedAt records this verification, not the date the network reached this capacity.",
+      "The official Chinese product page also advertises 120+ Tbps. No newer larger figure was established by targeted searches for BytePlus CDN Tbps capacity.",
+      "The separate 70+ locations/regions and 1,300+ nodes claims are footprint measures, not additional capacity. DDoS protection plan limits are also distinct."
+    ],
+    "checkedSources": [
+      {
+        "url": "https://www.byteplus.com/en/product/cdn",
+        "outcome": "Opened; Network capacity section says over 120 Tbps bandwidth capacity."
+      },
+      {
+        "url": "https://www.byteplus.com/zh-CN/product/cdn",
+        "outcome": "Official search result corroborates 120+ Tbps bandwidth resources."
+      },
+      {
+        "url": "https://docs.byteplus.com/ja/docs/byteplus-cdn/DDoS_protection_levels",
+        "outcome": "Official search result describes per-plan DDoS protection capability; excluded from CDN delivery capacity."
+      }
+    ]
+  },
+  {
+    "slug": "google-cloud-cdn",
+    "display": "Not published",
+    "valueTbps": null,
+    "metric": "Aggregate Cloud CDN delivery capacity",
+    "status": "not_published",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Cloud CDN cache locations",
+      "url": "https://docs.cloud.google.com/cdn/docs/locations"
+    },
+    "networkNote": "Google's global edge network; aggregate Cloud CDN capacity is not published in the reviewed sources.",
+    "notes": [
+      "No numerical aggregate Cloud CDN delivery-capacity claim was established from the current product page, overview, cache-location documentation, or targeted official-domain searches for Cloud CDN Tbps and network capacity.",
+      "The cache-location document, last updated 2026-10-07, describes shared Google edge PoPs and dynamic distribution of caching resources, and lists Seoul. It does not publish aggregate bandwidth.",
+      "The separate Media CDN product is described as having Tbps-scale capacity, without a numerical total. This is not a Cloud CDN capacity figure.",
+      "Google data-center fabric/bisection bandwidth, subsea cable capacity, public peering port sums, and Cloud Storage per-project quotas are not substituted for Cloud CDN delivery capacity."
+    ],
+    "checkedSources": [
+      {
+        "url": "https://cloud.google.com/cdn",
+        "outcome": "Opened; distinguishes Cloud CDN and Media CDN and describes global scale, without numerical aggregate Cloud CDN capacity."
+      },
+      {
+        "url": "https://docs.cloud.google.com/cdn/docs/overview",
+        "outcome": "Opened; product architecture and load-balancer integration, without numerical aggregate delivery capacity."
+      },
+      {
+        "url": "https://docs.cloud.google.com/cdn/docs/locations",
+        "outcome": "Opened; describes global edge caches and footprint, without numerical aggregate bandwidth."
+      },
+      {
+        "url": "https://docs.cloud.google.com/cdn/docs/choose-cdn-product",
+        "outcome": "Opened; Tbps-scale capacity refers to Media CDN, a separate product, and supplies no numerical total."
+      },
+      {
+        "url": "https://cloud.google.com/blog/topics/developers-practitioners/googles-subsea-fiber-optics-explained/",
+        "outcome": "Official search result describes 1 Pbps Jupiter data-center bisection bandwidth, not Cloud CDN delivery capacity; excluded."
+      },
+      {
+        "url": "https://docs.cloud.google.com/cdn/docs/quotas",
+        "outcome": "Direct web-tool open unavailable; not relied on as evidence."
+      }
+    ]
+  },
+  {
+    "slug": "azure-front-door",
+    "display": "Not published",
+    "valueTbps": null,
+    "metric": "Aggregate Azure Front Door delivery capacity",
+    "status": "not_published",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Azure Front Door network locations",
+      "url": "https://learn.microsoft.com/en-us/azure/frontdoor/edge-locations-by-region"
+    },
+    "networkNote": "192 edge locations across 109 metros, including Seoul; aggregate Front Door capacity is not published in the reviewed sources.",
+    "notes": [
+      "No numerical aggregate Front Door delivery-capacity claim was established from the product page, overview, network inventory, limits documentation, or targeted Microsoft-domain searches for Front Door Tbps, terabits and network capacity.",
+      "The current detailed network inventory reports 192 edge locations across 109 metro cities and lists Seoul. Counts describe footprint, not bandwidth.",
+      "The documented 75 Gbps bandwidth limit is a service/profile quota with support-request increases; it is not total network capacity.",
+      "Microsoft-wide backbone bandwidth, DDoS protection capacity, attack records and public peering port sums must not be labeled Front Door CDN capacity."
+    ],
+    "checkedSources": [
+      {
+        "url": "https://azure.microsoft.com/en-us/products/frontdoor/",
+        "outcome": "Opened; describes Microsoft's private global network and scale, without numerical aggregate delivery capacity."
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview",
+        "outcome": "Opened; architecture and global delivery benefits, without aggregate bandwidth."
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/frontdoor/edge-locations-by-region",
+        "outcome": "Opened; public article body readable despite authorization notice. Reports 192 edge locations, 109 metro cities and Seoul; no capacity total."
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-front-door-service-limits",
+        "outcome": "Opened; Front Door Standard/Premium service limits show 75 Gbps maximum bandwidth with support-request increases; excluded as an account/profile quota."
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-faq",
+        "outcome": "Official search result describes globally distributed service scaling but supplies no aggregate capacity."
+      }
+    ]
+  },
+  {
+    "slug": "sucuri",
+    "display": "Not published",
+    "valueTbps": null,
+    "metric": "Aggregate CDN delivery capacity",
+    "status": "not_published",
+    "claimedAt": null,
+    "checkedAt": "2026-10-10",
+    "source": {
+      "label": "Sucuri Firewall and CDN",
+      "url": "https://sucuri.net/website-firewall/"
+    },
+    "networkNote": "Global Anycast CDN; aggregate delivery capacity is not published in the reviewed sources.",
+    "notes": [
+      "The current Firewall/CDN product page describes an Anycast CDN but gives no numerical aggregate delivery-capacity total. Targeted official-domain and general searches for Sucuri network capacity, Tbps and Gbps did not establish a newer CDN delivery figure.",
+      "The official technical whitepaper with a 2023 copyright reports more than 250 Gigabytes Per Second (GPS) in Exhibit B, Network-Based DDoS Attacks, page 9. Its context is inbound attack absorption, not outbound CDN delivery.",
+      "The whitepaper's unusual Gigabytes Per Second wording is retained only as a research observation. It is not silently corrected to gigabits, normalized to Tbps, or presented as current CDN capacity. A substantially identical statement appears in the older official whitepaper.",
+      "Some search results refer to Sucura Networks, a different vendor; they were excluded."
+    ],
+    "checkedSources": [
+      {
+        "url": "https://sucuri.net/website-firewall/",
+        "outcome": "Opened; confirms Anycast CDN and DDoS mitigation features, without numerical aggregate CDN delivery capacity."
+      },
+      {
+        "url": "https://docs.sucuri.net/website-firewall/sucuri-cdn/",
+        "outcome": "Initial open and indexed text describe CDN operation; subsequent body extraction timed out. Not relied on for a numerical claim."
+      },
+      {
+        "url": "https://sucuri.net/wp-content/uploads/2023/05/sucuri_technical_whitepaper_2023.pdf",
+        "outcome": "Opened; page 9 gives the historical >250 Gigabytes Per Second claim in the inbound DDoS context, while page 16 carries the 2023 copyright. Excluded from CDN delivery capacity."
+      },
+      {
+        "url": "https://sucuri.net/documentation/Sucuri-Technical-Whitepaper.pdf",
+        "outcome": "Official search result repeats the older >250 Gigabytes Per Second inbound DDoS-context wording."
+      },
+      {
+        "url": "https://sucuri.net/guides/getting-started-with-sucuri/",
+        "outcome": "Official search result confirms the Firewall includes a CDN on the global network of secure data centers; no aggregate figure."
+      }
+    ]
+  }
+]

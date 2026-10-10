@@ -47,15 +47,15 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - They provide a cdn, dns with a free plan.
   - Most recommended cdn for free plan.
   - In free plan, APAC route is conditionally provided.
-- Network edge capacity
-  - [500 Tbps external interconnection capacity](https://blog.cloudflare.com/500-tbps-of-capacity/) (2026.04)
+- Network capacity
+  - [534 Tbps global network capacity](https://www.cloudflare.com/network-services/products/magic-transit/) (checked 2026.10).
 - Have a free plan?
   - Yes
 - Pricing
   - Free plan: Free
-  - Pro plan: $25/month
-  - Business plan: $250/month
-  - Enterprise plan: $5000+/month
+  - Pro plan: $25/month, or $20/month billed annually.
+  - Business plan: $250/month, or $200/month billed annually.
+  - Enterprise: $5,000+/month from what I've seen; [contact sales](https://www.cloudflare.com/plans/) for a quote.
 - Additional bandwidth price
   - unmetered for all plan
   - But it's inconsistent and subjective, if you use too much bandwidth, they will ask you to upgrade your plan.
@@ -71,21 +71,18 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - They provide a cdn, dns with a free plan.
   - 1TB/month bandwidth for free plan.
-  - L7 ddos protection is available for enterprise plan.
-- Network edge capacity
-  - [200+ Tbps](https://gcore.com/network) (2026.09)
+  - L3/L4 DDoS protection is included; WAAP is available on request.
+- Network capacity
+  - [200+ Tbps global network capacity](https://gcore.com/edge-network) (checked 2026.10).
 - Have a free plan?
   - Yes
 - Pricing
-  - Free plan: Free
-  - Start plan: $37/month
-  - Pro plan: $105/month
-  - Enterprise plan: Contact sales
+  - Pay-as-you-go: €0/month, including 1TB/month. Prices exclude VAT.
+  - Enterprise plan: Contact sales.
+  - [Pricing page](https://gcore.com/pricing/edge-network).
 - Additional bandwidth price
-  - Free plan: 1TB free, $0.0315/GB for overage
-  - Start plan: 1.5TB included, $0.024/GB for overage
-  - Pro plan: 5TB free, $0.021/GB for overage
-  - Enterprise plan: If you have any information about this, please pull request.
+  - First 1TB/month is free, then €0.01/GB.
+  - Requests above 1 billion/month cost €0.75 per million.
 - Video streaming allowed?
   - Yes, for all plan.
 
@@ -94,10 +91,10 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - They provide a cdn, dns with a free trial.
   - 14 days free trial, no cc required.
-- Network edge capacity
-  - [250+ Tbps](https://bunny.net/network/) (2026.09)
+- Network capacity
+  - [250+ Tbps network capacity](https://bunny.net/network/) (checked 2026.10).
 - Have a free plan?
-  - No. 14-day free trial.
+  - No. Trial ends after 14 days or credit exhaustion: $20 without a card, $50 with a card. [Trial details](https://bunny.net/docs/faq).
 - Pricing
   - $1/month minimum. [Pricing page](https://bunny.net/pricing)
   - Standard Network 119 PoPs
@@ -109,7 +106,7 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - Volume Network 10 PoP
     - First 500TB: $0.005/GB
     - From 500TB-1PB: $0.004/GB
-    - From 1PB-2PB: $0.002/GB
+    - From 1PB-2PB: Confirm pricing; the pricing page lists $0.002/GB, but the [docs](https://bunny.net/docs/cdn/pricing) list $0.003/GB.
     - From 2PB+: Contact sales team.
 - Video streaming allowed?
   - Yes
@@ -120,9 +117,9 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - Most biggest CDN provider.
   - Focus on enterprise
 - Network edge capacity
-  - Over 1 Pbps(2024.07)
+  - [1+ Pbps edge capacity](https://www.akamai.com/glossary/what-is-a-cdn) (checked 2026.10).
 - Have a free plan?
-  - No
+  - No. [30-day Adaptive Media Delivery trial](https://www.akamai.com/products/adaptive-media-delivery).
 - Pricing
   - Enterprise: Contact sales team.
   - I reached out to them and they have a similar pricing policy to other CDNs.
@@ -134,14 +131,14 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - Parent company of datapacket.com
   - Recommended for large bandwidth users.
-- Network edge capacity
-  - [330 Tbps](https://www.cdn77.com/network) (2026.09)
+- Network capacity
+  - [330 Tbps global network capacity](https://www.cdn77.com/network) (checked 2026.10).
 - Have a free plan?
   - No. [Free trial available through sales](https://www.cdn77.com/pricing).
 - Pricing
   - 250TB: $990/M
     - $3.96/TB overages
-  - Over 250TB: Contact sales team.
+  - Larger commitments: Contact sales team.
 - Video streaming allowed?
   - Yes
 
@@ -149,14 +146,15 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 
 - Description
   - AWS, Expensive
-- Network edge capacity
-  - ? Tbps(2023.08)
+- Network capacity
+  - [Hundreds of Tbps of deployed capacity](https://aws.amazon.com/cloudfront/features/) (checked 2026.10).
 - Have a free plan?
   - Pay-as-you-go: 1TB and 10 million requests/month, always free.
   - Flat-rate Free plan: 100GB and 1 million requests/month.
 - Pricing
   - It's complicated, visit pricing page for more.
-  - Paid flat-rate plans start at $15/month, with no overage charges.
+  - Flat-rate Pro: $15/month, including 50TB and 10 million requests, with no overage charges.
+  - Sustained excess usage can lead to delivery adjustments.
   - [Pricing page](https://aws.amazon.com/cloudfront/pricing/)
 - Video streaming allowed?
   - Yes
@@ -166,28 +164,27 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - Pricing is insanely expensive.
   - But no one pays full price for that, so reach out to sales and ask for enterprise pricing.
-- Network edge capacity
-  - [622 Tbps](https://www.fastly.com/network-map) (2026.06)
+- Network capacity
+  - [622 Tbps connected global capacity](https://www.fastly.com/network-map) (2026.06).
 - Have a free plan?
   - Yes, 100GB and 1 million requests/month.
 - Pricing
   - Visit pricing page for more.
   - [Pricing page](https://www.fastly.com/pricing)
-  - $0.08/GB~$0.28/GB
+  - First paid 10TB/month: $0.12/GB~$0.28/GB by region.
+  - Next 10TB: $0.08/GB~$0.24/GB. Requests above the free allowance start at $0.01 per 10,000.
 - Video streaming allowed?
   - Yes
 
 ### [CacheFly](https://www.cachefly.com/)
 
 - Description
-  - 100GB/m traffic with always free plan!
+  - 100GB traffic with a free developer account!
   - Free account supports one domain.
-- Network edge capacity
-  - ? Tbps(2023.08)
 - Have a free plan?
-  - Yes, 100GB/month for one domain.
+  - Yes, 100GB for one domain; confirm the renewal period.
 - Pricing
-  - Developer: Free, 100GB/month, one domain.
+  - Developer: Free, 100GB, one domain.
   - Adoption: $299/month, 10TB/month.
   - Production: $1,499/month, 10TB/month.
   - Governance: $3,499/month, 10TB/month.
@@ -202,11 +199,10 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - Focus on ddos protection.
   - also WAF
 - DDoS scrubbing capacity
-  - [13 Tbps](https://www.imperva.com/products/ddos-protection-services/) (2026.09)
+  - [13 Tbps](https://www.imperva.com/products/ddos-protection-services/) (checked 2026.10).
 - Have a free plan?
-  - No. [30-day free trial](https://www.imperva.com/free-trial/).
+  - No. [30-day free trial](https://www.imperva.com/free-trial/). Trials may be capped at 100 Mbps, with excess traffic null-routed.
 - Pricing
-  - Start >=$200
   - Contact sales team.
   - Very expensive, not suitable for large websites.
 - Video streaming allowed?
@@ -217,11 +213,12 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - CDN focused on Asia (specifically China).
 - Network edge capacity
-  - [200+ Tbps](https://documents.cdnetworks.com/document/media-live-vod/overviewvod) (2026.05)
+  - [200+ Tbps CDN capacity](https://documents.cdnetworks.com/document/media-live-vod/overviewvod) (2026.05).
 - Have a free plan?
   - No. CDN Pro has a free trial.
 - Pricing
   - Not an attractive price.
+  - CDN Pro Professional: from $0.04/GB + $1.95/CPU-hour, with a $50/month minimum.
   - [Pricing page](https://www.cdnetworks.com/products/cdnpro-pricing/)
 - Video streaming allowed?
   - Yes
@@ -230,12 +227,14 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 
 - Description
   - Made in Switzerland.
-- Network edge capacity
-  - ? Tbps(2023.08)
+- Edge server connectivity
+  - [At least 40 Gbps of uplink connectivity per edge server](https://www.keycdn.com/network) (checked 2026.10).
 - Have a free plan?
-  - No
+  - No. [14-day trial](https://www.keycdn.com/faq), no card required.
 - Pricing
   - Also Not an attractive price.
+  - First 10TB/month: North America & Europe $0.04/GB; Asia & Oceania $0.08/GB; Africa & Latin America $0.10/GB.
+  - $4/month minimum usage; $49 minimum payment. Requests are included.
   - [Pricing page](https://www.keycdn.com/pricing)
 - Video streaming allowed?
   - Yes
@@ -245,14 +244,12 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - Cheap
   - Use vultr as a infra.
-- Network edge capacity
-  - ? Tbps(2023.08)
 - Have a free plan?
-  - No
+  - No. A [30-day Pro trial](https://www.belugacdn.com/faq/) is advertised; confirm availability at signup.
 - Pricing
   - Global same price, $0.01/GB
   - $1/month active account fee; starts with a $10 prepayment for 1,000GB.
-  - Request overage fees apply above 5,000 requests per GB. [Pricing details](https://www.belugacdn.com/cdn/)
+  - Above 5,000 requests per GB: $0.0035 per 10,000 additional requests. [Request fees](https://www.belugacdn.com/legal/sla.html)
   - There are additional discounts for bulk contracts.
 - Video streaming allowed?
   - Yes
@@ -264,7 +261,7 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - Company located in russia, they don't care about dmca and other many abuse.
   - [CDN nodes](https://ddos-guard.net/technologies/cdn) in Russia, Europe, the US, South America and Asia.
 - DDoS scrubbing capacity
-  - [4+ Tbps](https://ddos-guard.net/about-us) (2026.09)
+  - [4+ Tbps](https://ddos-guard.net/about-us) (checked 2026.10).
 - Have a free plan?
   - No. [3-day Basic trial](https://ddos-guard.net/web-protection).
 - Pricing
@@ -280,12 +277,13 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - advancedhosting.com's brand
   - Uses NTT and other [network carriers](https://blazingcdn.com/about/).
 - Network edge capacity
-  - 5 Tbps(2024.07)
+  - Current aggregate capacity unconfirmed.
 - Have a free plan?
   - No. 14-day paid test at $5/TB, with the monthly minimum waived.
 - Pricing
   - $0.005/GB == $5/TB for the first 5TB, with a $25/month minimum.
   - Progressive volume tiers drop to $2.50/TB; bulk contracts can be cheaper. [Pricing page](https://blazingcdn.com/pricing/)
+  - Video CDN permanent cache: first 500GB included, then $0.02/GB/month.
 - Video streaming allowed?
   - Yes
 
@@ -295,8 +293,8 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - Also cheapest player
   - Used to be Cogent-only, and the routing was terrible.
   - They revamped the service around 2025 and added more upstreams, including NTT. It's now pretty usable even in Asia.
-- Network edge capacity
-  - 100 Tbps(2023.08)
+- Provider network capacity
+  - [100+ Tbps installed external capacity across FDC infrastructure](https://my.linkedin.com/jobs/view/network-engineer-l2-carrier-service-provider-operations-juniper-at-fdcservers-net-4435030075) (checked 2026.10).
 - Have a free plan?
   - No
 - Pricing
@@ -312,15 +310,16 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - ByteDance's CDN.
   - Used fairly often in Asia, especially CJK.
   - Supports private S3-compatible origins. [Origin settings](https://docs.byteplus.com/en/docs/byteplus-cdn/docs-origin-configurations).
+- Network edge capacity
+  - [120+ Tbps CDN bandwidth capacity](https://www.byteplus.com/en/product/cdn) (checked 2026.10).
 - Have a free plan?
-  - One-time introductory package: 1TB of traffic and 10 million requests.
-  - Check its expiry when claiming it. [Trial details](https://docs.byteplus.com/en/docs/byteplus-cdn/docs-billing).
+  - One-time introductory package: 1TB of traffic and 10 million requests, valid for 30 days. [Trial details](https://docs.byteplus.com/en/docs/byteplus-cdn/docs-pricing).
 - Pricing
   - Pay-as-you-go, settled hourly.
   - First 10TB/month:
     - North America & Europe: $0.044/GB
     - South Korea: $0.088/GB
-  - Requests cost extra.
+  - Requests: $0.012 per 10,000. Edge-to-origin transfer: $0.06/GB.
   - [Pricing page](https://docs.byteplus.com/en/docs/byteplus-cdn/docs-pricing)
 
 ### [Google Cloud CDN](https://cloud.google.com/cdn)
@@ -328,12 +327,13 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - Requires an external Application Load Balancer. [Setup](https://docs.cloud.google.com/cdn/docs/overview).
 - Have a free plan?
-  - New Google Cloud customers can use a one-time $300 trial credit. [Trial details](https://cloud.google.com/cdn).
+  - Eligible new Google Cloud customers can use a one-time $300 credit for 90 days. [Trial details](https://docs.cloud.google.com/free/docs/free-cloud-features).
 - Pricing
   - First 10TiB/month:
     - North America & Europe: $0.08/GiB
     - Asia Pacific: $0.09/GiB
-  - Cache lookups and cache fill cost extra. Include load balancer charges in your estimate too.
+  - Cache lookups: $0.0075 per 10,000. Cache fill: $0.01~$0.04/GiB.
+  - Load balancer forwarding rules start at $0.025/hour; other load balancer charges can apply.
   - [Pricing page](https://cloud.google.com/cdn/pricing)
 
 ### [Azure Front Door](https://azure.microsoft.com/en-us/products/frontdoor/)
@@ -341,6 +341,8 @@ A personal shortlist of CDNs for individual developers and startups, with practi
 - Description
   - Microsoft's CDN with global load balancing.
   - The base fee alone is steep for a small site.
+- Have a free plan?
+  - Eligible new Azure customers can use a one-time $200 credit for 30 days. [Trial details](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account).
 - Pricing
   - Standard: from $35/month per profile.
   - Premium: from $330/month per profile, including managed WAF rules and Private Link support.
@@ -353,6 +355,8 @@ A personal shortlist of CDNs for individual developers and startups, with practi
   - A website firewall with a CDN included.
   - They advertise unlimited bandwidth, but I don't know the FUP.
   - Malware cleanup requires a Website Security Platform plan. [Plan differences](https://sucuri.net/faq/).
+- Have a free plan?
+  - No. [30-day Website Firewall trial](https://sucuri.net/website-firewall-a/free-trial/).
 - Pricing
   - Basic Firewall: from $9.99/month for one site, including the CDN.
   - [Pricing page](https://sucuri.net/website-firewall/)
