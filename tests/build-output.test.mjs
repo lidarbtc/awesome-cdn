@@ -15,7 +15,7 @@ test('static hosting has a styled, noindex 404 fallback outside the sitemap', as
     readOutput('404.html'),
     readOutput('sitemap.xml'),
   ]);
-  assert.match(html, /<title>Page not found — cache\.box<\/title>/);
+  assert.match(html, /<title>Page not found \| cache\.box<\/title>/);
   assert.match(html, /<h1>A cache miss\.<\/h1>/);
   assert.match(html, /<meta name="robots" content="noindex, follow">/);
   assert.match(html, /href="\/assets\/styles\.css"/);

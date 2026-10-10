@@ -1,0 +1,161 @@
+{
+  "checkedAt": "2026-10-10",
+  "records": [
+    {
+      "slug": "keycdn",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul (krse) is listed as an active PoP.",
+      "product": "Pay-as-you-go CDN",
+      "planNote": "The public plan includes the entire network.",
+      "pricing": "$0.08/GB · Asia/Oceania, first 10 TB/month",
+      "pricingNote": "$4 monthly minimum; $49 minimum payment. Higher-volume Asia/Oceania tiers are $0.06, $0.04 and $0.02/GB. Requests are included.",
+      "sources": [
+        {
+          "label": "Network",
+          "url": "https://www.keycdn.com/network",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "Live HTTP 200 HTML lists Seoul in Asia and shows dc__location--krse with an ordinary active pin, unlike the separate planned-pin class used for planned cities. The web reader timed out, so the live page was fetched directly."
+        },
+        {
+          "label": "Network status",
+          "url": "https://status.keycdn.com/",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "The live status page lists Seoul, code krse, as operational under Asia."
+        },
+        {
+          "label": "Pricing",
+          "url": "https://www.keycdn.com/pricing",
+          "fields": ["product", "planNote", "pricing", "pricingNote"],
+          "evidence": "The pricing page grants access to the entire network. Asia/Oceania bandwidth is $0.08/GB for the first 10 TB/month, $0.06 for the next 40 TB, $0.04 for the next 50 TB, and $0.02 above 100 TB. It lists a $4 monthly minimum, $49 minimum payment, and no request charges."
+        }
+      ],
+      "limitations": [
+        "Published location and plan access do not prove that a particular Korean ISP will be routed to Seoul.",
+        "No traffic measurements were performed."
+      ]
+    },
+    {
+      "slug": "belugacdn",
+      "seoulStatus": "unconfirmed",
+      "locationNote": "Seoul appears on the official 2016 map; current availability is unconfirmed.",
+      "product": "Pay-as-you-go CDN",
+      "planNote": "Ask for current Seoul availability and plan access before relying on the old map.",
+      "pricing": "Seoul pricing unconfirmed",
+      "pricingNote": "The public global rate starts at $0.01/GB, with a $1 monthly active-account fee. This is not a verified Seoul offer.",
+      "sources": [
+        {
+          "label": "Network FAQ",
+          "url": "https://www.belugacdn.com/faq/",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "The live FAQ states 28 global PoPs and 9 SuperPoPs and links its map to https://www.belugacdn.com/map.pdf."
+        },
+        {
+          "label": "Network map (2016)",
+          "url": "https://www.belugacdn.com/map.pdf",
+          "fields": ["seoulStatus", "locationNote", "planNote"],
+          "evidence": "Downloaded the live PDF and visually inspected its single rendered page. It is explicitly titled BelugaCDN Network Map 2016, shows Seoul with the ordinary PoP marker, and carries a 2016 copyright. It does not establish current operations or plan eligibility."
+        },
+        {
+          "label": "CDN pricing",
+          "url": "https://www.belugacdn.com/cdn/",
+          "fields": ["product", "pricingNote"],
+          "evidence": "The live product page advertises $0.01/GB global bandwidth. Its pay-as-you-go details state $10 prepayment for 1,000 GB and a $1 active-account monthly fee. No Seoul-specific availability or billing conditions are given."
+        }
+      ],
+      "limitations": [
+        "The linked map is ten years old, even though the current FAQ still links to it.",
+        "Do not interpret unconfirmed as proof that Seoul is absent.",
+        "Global headline pricing is not confirmation of current Seoul access."
+      ]
+    },
+    {
+      "slug": "ddos-guard",
+      "seoulStatus": "unconfirmed",
+      "locationNote": "Asian coverage is described, but a Seoul CDN node is not confirmed.",
+      "product": "Website Protection with CDN",
+      "planNote": "Caching is included on every website-protection plan; confirm the delivery location with support.",
+      "pricing": "Seoul pricing unconfirmed",
+      "pricingNote": "Website Protection starts at $100/month for one domain, including CDN. No Seoul-specific bandwidth rate is published on the checked pages.",
+      "sources": [
+        {
+          "label": "CDN technology",
+          "url": "https://ddos-guard.net/technologies/cdn",
+          "fields": ["seoulStatus", "locationNote", "product", "planNote"],
+          "evidence": "Live HTTP 200 page fetched directly after web-reader failure. It states that scrubbing nodes also cache content, describes regions including Asia, and says every protected website uses the CDN by default. It gives no Seoul city-level confirmation."
+        },
+        {
+          "label": "Website Protection plans",
+          "url": "https://ddos-guard.net/web-protection",
+          "fields": ["product", "planNote", "pricingNote"],
+          "evidence": "Live HTTP 200 page lists Basic at $100/month for one domain. The FAQ describes built-in CDN on every plan and no separate charges for legitimate or attack bandwidth. Caching is enabled by default. These general website-protection terms do not identify a Seoul location."
+        },
+        {
+          "label": "Global and Asia connections",
+          "url": "https://ddos-guard.net/technologies/global-and-asia",
+          "fields": ["locationNote", "planNote"],
+          "evidence": "The live page distinguishes Global from Asia connectivity and discusses direct Asian infrastructure connections through Twin Tunnel or PNI. It neither names Seoul nor establishes the equivalent website-protection plan access."
+        }
+      ],
+      "limitations": [
+        "Regional coverage does not confirm a Seoul cache.",
+        "The Asia connection option should not be silently equated with a Seoul website CDN plan."
+      ]
+    },
+    {
+      "slug": "blazingcdn",
+      "seoulStatus": "unconfirmed",
+      "locationNote": "The current network page does not confirm a Seoul edge location.",
+      "product": "FLEX Anycast CDN",
+      "planNote": "Confirm Seoul availability for FLEX; dedicated infrastructure is separately quoted.",
+      "pricing": "Seoul pricing unconfirmed",
+      "pricingNote": "Public FLEX starts at $5/TB with a $25 monthly minimum and the same advertised rate across US, Europe and Asia. Seoul access is unverified.",
+      "sources": [
+        {
+          "label": "Network and company",
+          "url": "https://blazingcdn.com/about/",
+          "fields": ["seoulStatus", "locationNote", "planNote"],
+          "evidence": "The live page describes 25+ locations across Europe, Asia and America, but provides no city inventory. It lists KINX and SK Broadband among APAC carriers; carrier names alone do not establish a Seoul cache. Enterprise customization is described separately."
+        },
+        {
+          "label": "FLEX pricing",
+          "url": "https://blazingcdn.com/pricing/",
+          "fields": ["product", "planNote", "pricingNote"],
+          "evidence": "The live pricing page describes FLEX Anycast CDN at $5/TB initially with a $25 monthly minimum, then marginal volume tiers down to $2.50/TB. It advertises a common price for US, Europe and Asia, without naming Seoul. Dedicated CDN infrastructure is quoted separately from the shared network."
+        }
+      ],
+      "limitations": [
+        "A search-indexed older version of the vendor blog's how-youtube-cdn-works article mentioned Seoul, but reopening that URL live returned a revised article without Seoul. The stale snippet was not accepted as current PoP proof.",
+        "Public global pricing and Korean carrier names are not confirmation of Seoul plan access.",
+        "No independent latency or edge-location measurements were performed."
+      ]
+    },
+    {
+      "slug": "fdcservers",
+      "seoulStatus": "unconfirmed",
+      "locationNote": "A Seoul company location is listed, but its published data does not mark CDN deployment there.",
+      "product": "FDC CDN",
+      "planNote": "All deployed CDN nodes are included; confirm Seoul separately from colocation and IP transit.",
+      "pricing": "Seoul pricing unconfirmed",
+      "pricingNote": "Public CDN pricing is $4/TB for 0–499 TB, $3/TB for 500–1,999 TB, and $2/TB above that. Setup is $20 including 5 TB; Seoul access is unverified.",
+      "sources": [
+        {
+          "label": "CDN network and pricing",
+          "url": "https://fdcservers.net/product/cdn",
+          "fields": ["seoulStatus", "locationNote", "product", "planNote", "pricingNote"],
+          "evidence": "The live page states all CDN nodes are available on the plan at one global rate and lists $4/$3/$2 per TB tiers plus $20 setup including 5 TB. Its embedded public location data includes Seoul (id 117, latitude 37.56, longitude 126.99), with is_cdn_deployed:false, is_colocation_deployed:true, and is_ip_transit_deployed:true. A generic Seoul company location must not be presented as a deployed CDN PoP."
+        },
+        {
+          "label": "CDN billing FAQ",
+          "url": "https://global-cdn.fdcservers.net/",
+          "fields": ["product", "pricingNote"],
+          "evidence": "The live CDN microsite repeats the $4/$3/$2 per TB rates and $20 setup including 5 TB. It describes 30 global locations, compared with 23 on the main product page, but does not identify Seoul."
+        }
+      ],
+      "limitations": [
+        "The public embedded location data is a vendor inventory, not a measurement of actual traffic routing.",
+        "The two official pages disagree on total CDN location count; neither is evidence of Seoul access.",
+        "Use unconfirmed rather than a categorical claim that FDC has no Seoul CDN."
+      ]
+    }
+  ]
+}

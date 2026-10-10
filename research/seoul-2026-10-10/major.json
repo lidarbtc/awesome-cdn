@@ -1,0 +1,171 @@
+{
+  "checkedAt": "2026-10-10",
+  "records": [
+    {
+      "slug": "cloudflare",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul is listed on the global network map.",
+      "product": "Website CDN · Free, Pro, Business, Contract",
+      "planNote": "CDN is included across plans. Network Prioritization is a Contract feature; the public plans do not promise Seoul routing for a particular tier.",
+      "pricing": "Free / Pro $25/mo",
+      "pricingNote": "Pro is $20/mo annually or $25 monthly; Business is $200/mo annually or $250 monthly. No separate Korean website-CDN rate is published. Contract pricing is custom.",
+      "sources": [
+        {
+          "label": "Network map",
+          "url": "https://www.cloudflare.com/network/",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "The current Asia data-center list includes Seoul, KR."
+        },
+        {
+          "label": "Plans",
+          "url": "https://www.cloudflare.com/plans/",
+          "fields": ["product", "planNote", "pricing", "pricingNote"],
+          "evidence": "Website CDN appears under Free, Pro, Business and Contract. Network Prioritization is available on Contract, with dashes for the three self-service tiers. Published monthly/annual-billing prices are $0, $25/$20 and $250/$200; Contract is custom. No city-specific entitlement is given."
+        },
+        {
+          "label": "Geographic traffic routing",
+          "url": "https://developers.cloudflare.com/support/troubleshooting/general-troubleshooting/geographic-traffic-routing/",
+          "fields": ["planNote", "limitations"],
+          "evidence": "Cloudflare explains that Anycast requests can reach a location other than the geographically nearest one and that reliability can take precedence over local delivery."
+        }
+      ],
+      "limitations": [
+        "Seoul presence does not establish a Seoul path for Free, Pro or Business traffic. No ISP-specific path was measured.",
+        "Contract Network Prioritization is not presented here as a guarantee of a specific city."
+      ]
+    },
+    {
+      "slug": "bunny",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul is on Standard; it is not listed as a Volume location.",
+      "product": "Bunny CDN Standard",
+      "planNote": "Choose Standard and keep Asia & Oceania enabled. Volume uses a smaller network; its lower price does not include a listed Seoul PoP.",
+      "pricing": "$0.03/GB · Standard",
+      "pricingNote": "Asia & Oceania delivery rate, with a $1 monthly minimum and no CDN request fees. Volume starts at $0.005/GB for the first 500 TB, with a different footprint.",
+      "sources": [
+        {
+          "label": "Network map",
+          "url": "https://bunny.net/network/",
+          "fields": ["seoulStatus", "locationNote", "product", "planNote"],
+          "evidence": "The city list includes Seoul as a Standard location. The Volume markers in Asia are Hong Kong, Singapore and Tokyo; Seoul has no Volume marker."
+        },
+        {
+          "label": "CDN tier documentation",
+          "url": "https://bunny.net/docs/cdn/pricing",
+          "fields": ["product", "planNote", "pricing"],
+          "evidence": "Standard accesses the full network; Volume uses ten selected PoPs. Standard Asia & Oceania costs $0.03/GB. A Pull Zone's Pricing & Routing settings select the tier and enable or disable pricing regions."
+        },
+        {
+          "label": "Pricing",
+          "url": "https://bunny.net/pricing/",
+          "fields": ["pricing", "pricingNote"],
+          "evidence": "Lists Standard Asia & Oceania at $0.03/GB, Volume first 500 TB at $0.005/GB, a $1 monthly minimum and no request fees."
+        }
+      ],
+      "limitations": [
+        "The network list establishes tier coverage, not a measured path from a Korean ISP.",
+        "Volume pricing above 1 PB differs between the pricing page and documentation; that band is not quoted here."
+      ]
+    },
+    {
+      "slug": "gcore",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul is listed in the current CDN status components.",
+      "product": "CDN PAYG / Enterprise",
+      "planNote": "The new PAYG plan includes 210+ PoPs. Existing Free, Start and Pro accounts must switch during the initial rollout; their old plan should not be assumed to have PAYG coverage.",
+      "pricing": "1 TB free, then €0.01/GB",
+      "pricingNote": "PAYG's first paid band runs above 1 TB through 500 TB/month. Requests above 1 billion cost €0.75/million. No Korean surcharge is listed; VAT is excluded.",
+      "sources": [
+        {
+          "label": "CDN status components",
+          "url": "https://status.gcore.com/subscribe/email",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "The public page's server-rendered component tree, fetched on 2026-10-10, contains Gcore > CDN > Asia & Pacific > Seoul, South Korea with status OPERATIONAL. The separate Hosting > Seoul (KX) component was not used as CDN evidence."
+        },
+        {
+          "label": "PAYG launch and migration",
+          "url": "https://gcore.com/developers/pay-as-you-go-cdn",
+          "fields": ["product", "planNote", "pricing", "pricingNote"],
+          "evidence": "September 25, 2026 announcement replaces Free, Start and Pro with PAYG for new customers, giving every self-service customer access to 210+ PoPs and 1 TB free monthly. Existing accounts can opt in and are not moved automatically initially. Progressive usage bands: above 1 TB–500 TB €0.01/GB; 500 TB–1 PB €0.008; 1–2 PB €0.0065; above 2 PB €0.005."
+        },
+        {
+          "label": "CDN pricing",
+          "url": "https://gcore.com/pricing/edge-network",
+          "fields": ["product", "pricing", "pricingNote"],
+          "evidence": "Current English pricing table gives PAYG and Enterprise 210+ PoPs; PAYG includes 1 TB monthly, €0.01/GB overage, €0.75/million requests above 1 billion, excluding VAT. It does not publish a South Korea surcharge."
+        }
+      ],
+      "limitations": [
+        "The English PAYG pages are newer than localized pages that still show the legacy Free/Start/Pro plans.",
+        "No route from KT, SK Broadband or LG U+ was measured; published PoP access is not a city-selection guarantee."
+      ]
+    },
+    {
+      "slug": "fastly",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul is listed as an active PoP, outside the Coming soon list.",
+      "product": "Full Site Delivery",
+      "planNote": "Full Site Delivery has a recurring free allowance and usage pricing. South Korea is a separate billing region from Asia; no Seoul-only routing commitment is published on the pricing page.",
+      "pricing": "$0.28/GB + requests",
+      "pricingNote": "After 100 GB free, South Korea is $0.28/GB through 10 TB/month, then $0.24/GB for the next 10 TB. After 1 million free requests, the first paid request band is $0.01/10,000. High-volume pricing is custom.",
+      "sources": [
+        {
+          "label": "Network map",
+          "url": "https://www.fastly.com/network-map",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "Network map updated June 30, 2026 lists Seoul under Asia; planned locations are in a separate Coming soon list."
+        },
+        {
+          "label": "Full Site Delivery pricing",
+          "url": "https://www.fastly.com/pricing",
+          "fields": ["product", "planNote", "pricing", "pricingNote"],
+          "evidence": "Full Site Delivery bandwidth table bills per GB by region: 0–100 GB free, South Korea $0.28 for 100 GB–10 TB and $0.24 for the next 10 TB. General Asia is $0.19 and $0.14 respectively. Requests: first million free, then $0.01/10,000 through 100 million, with a lower next band."
+        }
+      ],
+      "limitations": [
+        "Listed prices are public Full Site Delivery rates, not negotiated media-delivery quotes.",
+        "Seoul listing and regional billing do not verify the edge selected for a particular visitor."
+      ]
+    },
+    {
+      "slug": "cloudfront",
+      "seoulStatus": "listed",
+      "locationNote": "AWS lists ten CloudFront PoPs in Seoul.",
+      "product": "PAYG: Price Class 200 or All · flat-rate plans",
+      "planNote": "For PAYG, South Korea is included in Price Class 200 and All, and excluded from 100. Flat-rate plans include the global CDN; sustained excess usage can lead to more distant delivery.",
+      "pricing": "PAYG $0.120/GB + requests",
+      "pricingNote": "PAYG: 1 TB and 10M requests free monthly, then $0.120/GB for the next 9 TB from the Korea pricing region; HTTPS $0.012/10,000 and HTTP $0.009/10,000. Separate flat-rate plans start at Free $0 and Pro $15/mo.",
+      "sources": [
+        {
+          "label": "CloudFront locations",
+          "url": "https://aws.amazon.com/cloudfront/features/",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "The CloudFront Points of Presence list gives South Korea: Seoul (10), distinct from AWS regions and regional edge caches."
+        },
+        {
+          "label": "PAYG pricing and price classes",
+          "url": "https://aws.amazon.com/cloudfront/pricing/pay-as-you-go/",
+          "fields": ["product", "planNote", "pricing", "pricingNote"],
+          "evidence": "South Korea's shared APAC region includes 1 TB free, next 9 TB $0.120/GB and next 40 TB $0.100/GB. First 10M HTTP(S) requests free; thereafter HTTP $0.009 and HTTPS $0.012 per 10,000. South Korea is Yes for Price Class All/200 and excluded for 100. An occasional out-of-class delivery is billed at the selected class's cheapest region."
+        },
+        {
+          "label": "Flat-rate pricing",
+          "url": "https://aws.amazon.com/cloudfront/pricing/",
+          "fields": ["product", "planNote", "pricingNote"],
+          "evidence": "Flat-rate plans include the global CloudFront CDN. Monthly entry tiers are Free $0 and Pro $15; these are distinct from PAYG per-GB charges."
+        },
+        {
+          "label": "Flat-rate usage allowances",
+          "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/flat-rate-pricing-plan.html",
+          "fields": ["planNote", "limitations"],
+          "evidence": "Free includes 100 GB and 1M requests monthly; Pro includes 50 TB and 10M. No overage fees, but substantial continuing excess can cause fewer or more distant edge locations or performance adjustments. Historical usage can affect eligibility."
+        }
+      ],
+      "limitations": [
+        "Price Class 100 can occasionally use an out-of-class edge; this does not make Seoul part of its documented coverage.",
+        "PAYG allowances and flat-rate allowances are separate offers; the $0.120/GB headline applies only to PAYG.",
+        "The published Seoul PoP count is not a measurement of Korean ISP routing."
+      ]
+    }
+  ]
+}

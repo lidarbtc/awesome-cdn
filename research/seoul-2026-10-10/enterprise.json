@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-10-10",
+  "records": [
+    {
+      "slug": "cdn77",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul is on the official network map.",
+      "product": "CDN77 Growth / Enterprise",
+      "planNote": "Growth includes every PoP. Enterprise infrastructure and terms are agreed with sales.",
+      "pricing": "$990/mo for 250 TB",
+      "pricingNote": "Growth includes global delivery; overage is $3.96/TB. No separate Korea rate is listed.",
+      "sources": [
+        {
+          "label": "Network map",
+          "url": "https://www.cdn77.com/network",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "Live HTML contains a primary map marker with data-name=Seoul and coordinates left:82.78%, top:44.64%; the serialized map data also names Seoul. The text-only web extractor omits these map labels."
+        },
+        {
+          "label": "Growth plan pricing",
+          "url": "https://www.cdn77.com/pricing",
+          "fields": ["product", "planNote", "pricing", "pricingNote"],
+          "evidence": "Growth lists 250 TB monthly traffic, all PoPs, $990/month and $3.96/TB overages. Enterprise pricing and infrastructure are customized. Confirmed in the live HTML as well as the extracted page."
+        }
+      ],
+      "limitations": [
+        "A listed PoP and plan inclusion do not demonstrate which edge will serve a particular Korean ISP. No routing measurements were performed."
+      ]
+    },
+    {
+      "slug": "akamai",
+      "seoulStatus": "unconfirmed",
+      "locationNote": "Seoul delivery edge not confirmed in the reviewed official sources.",
+      "product": "Akamai delivery products",
+      "planNote": "Confirm the delivery product, Korean ISP coverage and local edge access with sales.",
+      "pricing": "Request a quote",
+      "pricingNote": "Adaptive Media Delivery directs pricing enquiries to sales; no public Korea tariff was found.",
+      "sources": [
+        {
+          "label": "Media Services Live locations",
+          "url": "https://techdocs.akamai.com/msl/docs/geographical-locations-supported-by-msl4",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "Seoul and Yongdong appear as encoder and ingest location options for Media Services Live 4. This is ingest coverage, not evidence of a Seoul CDN delivery edge or plan entitlement."
+        },
+        {
+          "label": "Adaptive Media Delivery",
+          "url": "https://www.akamai.com/products/adaptive-media-delivery",
+          "fields": ["product", "pricing", "pricingNote"],
+          "evidence": "The current product page links pricing discussions to Contact Sales and offers an evaluation trial; it does not publish a Korea delivery tariff."
+        }
+      ],
+      "limitations": [
+        "Unconfirmed means insufficient city-specific delivery evidence, not an assertion that Akamai has no Seoul edge.",
+        "The former official points-of-presence-countries.pdf URL redirects to trust.akamai.com; it was not used as current city evidence.",
+        "Korean offices, cloud compute regions, and MSL ingest locations were not treated as delivery PoPs."
+      ]
+    },
+    {
+      "slug": "cachefly",
+      "seoulStatus": "private",
+      "locationNote": "Seoul is marked as a Private PoP.",
+      "product": "CacheFly CDN / private nodes",
+      "planNote": "Confirm Seoul access with sales. Private nodes are separately priced add-ons, not automatically included in a base plan.",
+      "pricing": "Seoul access: request a quote",
+      "pricingNote": "Base plans start at $299/mo with 10 TB. The public page does not publish a Seoul bandwidth rate.",
+      "sources": [
+        {
+          "label": "Network map",
+          "url": "https://www.cachefly.com/network-map/",
+          "fields": ["seoulStatus", "locationNote", "planNote"],
+          "evidence": "The South Korea entry names Seoul with the triangle marker; the map legend assigns that marker to Private POP."
+        },
+        {
+          "label": "Plans and private node add-ons",
+          "url": "https://www.cachefly.com/cdn-pricing/",
+          "fields": ["product", "planNote", "pricing", "pricingNote"],
+          "evidence": "Adoption is $299/month with 10 TB. Private CDN Nodes are optional add-ons available on any feature tier with contact-sales pricing. Extra bandwidth commitments depend on regional mix, growth and term. The page does not promise Seoul access with Adoption."
+        }
+      ],
+      "limitations": [
+        "The private-node add-on's general availability is not a commitment that every account can activate Seoul; city-specific availability and fees still need confirmation."
+      ]
+    },
+    {
+      "slug": "imperva",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul is marked operational on the official map.",
+      "product": "Imperva Secure CDN / WAAP",
+      "planNote": "Secure CDN is integrated with WAAP. Confirm Seoul access and delivery allowances for the proposed package.",
+      "pricing": "Request a quote",
+      "pricingNote": "No Korea bandwidth or request tariff was found on the reviewed product and contact pages.",
+      "sources": [
+        {
+          "label": "Global network map",
+          "url": "https://www.imperva.com/products/global-network-map/",
+          "fields": ["seoulStatus", "locationNote"],
+          "evidence": "Live HTML lists Seoul in the APAC PoP selector with status operational and provides a matching operational Seoul map marker."
+        },
+        {
+          "label": "Secure CDN",
+          "url": "https://www.imperva.com/products/content-delivery-network-cdn/",
+          "fields": ["product", "planNote", "pricingNote"],
+          "evidence": "Secure CDN is described as integrated into the Web Application and API Protection platform and links to the global network map. No Korea price or city-specific plan entitlement is shown."
+        },
+        {
+          "label": "Contact Imperva",
+          "url": "https://www.imperva.com/contact-us/",
+          "fields": ["pricing"],
+          "evidence": "The current page provides a contact form for the Imperva team, without a public CDN rate card."
+        }
+      ],
+      "limitations": [
+        "The web text extractor intermittently failed on the map and product page. The map was verified from its live official HTML; product text was available through web search.",
+        "Map status does not establish package entitlement, actual client routing, or measured performance."
+      ]
+    },
+    {
+      "slug": "cdnetworks",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul appears in CDN Pro's coverage list.",
+      "product": "CDNetworks CDN Pro",
+      "planNote": "Choose server groups by country and ISP. Check which enabled group contains the Seoul edge.",
+      "pricing": "$0.04–$0.237/GB by server group",
+      "pricingNote": "Standard $0.04, Premium $0.08, Deluxe $0.158, Ultra $0.237/GB; plus $1.95/CPU-hour. Professional has a $50/mo minimum.",
+      "sources": [
+        {
+          "label": "CDN Pro pricing and coverage",
+          "url": "https://www.cdnetworks.com/products/cdnpro-pricing/",
+          "fields": ["seoulStatus", "locationNote", "product", "planNote", "pricing", "pricingNote"],
+          "evidence": "The official page lists Seoul and four non-China traffic rates, CPU billing and the Professional minimum. Users select groups by country and ISP. Billing follows the group that serves the request, rather than applying the highest enabled rate to all traffic."
+        }
+      ],
+      "limitations": [
+        "The public coverage list does not map Seoul to a specific server group. This is a group rate range, not a single Korea rate.",
+        "The web page was read successfully, but a separate direct HTTP fetch returned 406.",
+        "These terms apply to CDN Pro, not every CDNetworks product."
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { providers, archivedProviders, getProvider } from './data/providers.js';
 import { calculatorPlans, estimatePlan } from './data/calculator.js';
+import { seoulProviders, seoulReviewDate } from './data/south-korea.js';
 
 export const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const e = escapeHTML;
@@ -43,7 +44,7 @@ export function renderProviderRows(search = '', filter = 'all', selected = []) {
 }
 function directory(state) {
   const chips=[['all','All providers'],['free','Free tier'],['usage','Pay as you go'],['video','Video delivery']];
-  return `<section class="hero"><div class="hero-copy"><h1>Find your<br>next edge<span class="accent">.</span></h1><p>Content delivery, with the details that matter.<br>Explore pricing, policies, and real-world tradeoffs.</p><div class="hero-note"><span class="small-avatar">cb</span><span>A personal shortlist, shared in the open.</span></div></div></section><section class="directory" aria-labelledby="directory-title"><div class="section-heading"><div class="section-title"><h2 id="directory-title">Explore providers</h2><span class="count-badge" id="provider-count" aria-live="polite" aria-label="Matching providers">${filteredProviders(state.search,state.filter).length}</span></div></div><div class="directory-toolbar"><div class="filter-tabs" role="group" aria-label="Filter providers">${chips.map(([value,label])=>`<button type="button" data-filter="${value}" class="${state.filter===value?'active':''}" aria-pressed="${state.filter===value}">${label}</button>`).join('')}</div><label class="search-field">${icon('search',17)}<input id="provider-search" name="search" type="search" placeholder="Find a provider or feature…" value="${e(state.search)}" aria-label="Search providers"><kbd>/</kbd></label></div><div class="provider-table"><div class="table-header"><span></span><span>PROVIDER</span><span>THE SHORT VERSION</span><span>PRICING</span><span>GETTING STARTED</span><span></span></div><div id="provider-rows">${renderProviderRows(state.search,state.filter,state.selected)}</div></div><div class="table-foot"><a href="/archive/">3 archived providers ${icon('arrow',14)}</a></div></section><section class="below-directory"><a class="field-note" href="/locations/south-korea/"><div class="eyebrow">FROM THE FIELD GUIDE <span>01</span></div><h3>A Seoul PoP is only<br>half the story.</h3><p>Start with the networks your audience uses.<br>A closer look at content delivery in South Korea.</p><span class="text-link">Explore South Korea ${icon('arrow',17)}</span><span class="field-note-globe" aria-hidden="true">${icon('globe',110)}</span></a></section>`;
+  return `<section class="hero"><div class="hero-copy"><h1>Find your<br>next edge<span class="accent">.</span></h1><p>Content delivery, with the details that matter.<br>Explore pricing, policies, and real-world tradeoffs.</p><div class="hero-note"><span class="small-avatar">cb</span><span>A personal shortlist, shared in the open.</span></div></div></section><section class="directory" aria-labelledby="directory-title"><div class="section-heading"><div class="section-title"><h2 id="directory-title">Explore providers</h2><span class="count-badge" id="provider-count" aria-live="polite" aria-label="Matching providers">${filteredProviders(state.search,state.filter).length}</span></div></div><div class="directory-toolbar"><div class="filter-tabs" role="group" aria-label="Filter providers">${chips.map(([value,label])=>`<button type="button" data-filter="${value}" class="${state.filter===value?'active':''}" aria-pressed="${state.filter===value}">${label}</button>`).join('')}</div><label class="search-field">${icon('search',17)}<input id="provider-search" name="search" type="search" placeholder="Find a provider or feature…" value="${e(state.search)}" aria-label="Search providers"><kbd>/</kbd></label></div><div class="provider-table"><div class="table-header"><span></span><span>PROVIDER</span><span>THE SHORT VERSION</span><span>PRICING</span><span>GETTING STARTED</span><span></span></div><div id="provider-rows">${renderProviderRows(state.search,state.filter,state.selected)}</div></div><div class="table-foot"><a href="/archive/">3 archived providers ${icon('arrow',14)}</a></div></section><section class="below-directory"><a class="field-note" href="/locations/south-korea/"><div class="eyebrow">FROM THE FIELD GUIDE <span>01</span></div><h3>Find a CDN<br>with a Seoul PoP.</h3><p>Check Seoul availability, plan restrictions,<br>and Korean delivery rates.</p><span class="text-link">Explore South Korea ${icon('arrow',17)}</span><span class="field-note-globe" aria-hidden="true">${icon('globe',110)}</span></a></section>`;
 }
 
 function renderReferences(record) {
@@ -74,14 +75,48 @@ function calculator() {
   return `<section class="page-intro"><div class="eyebrow">A LITTLE LESS MENTAL MATH</div><h1>Put a price on your traffic<span class="accent">.</span></h1><p>Public delivery pricing, with the minimums and regional rates included.</p></section><div class="calculator-layout"><form class="calculator-form" id="calculator-form"><div class="form-heading">Your monthly usage</div><label class="input-label" for="traffic">Data delivered</label><div class="unit-input"><input type="number" id="traffic" name="trafficTB" min="0" max="1000000" step="any" value="10" required><span>TB / month</span></div><div class="traffic-presets">${[1,10,100,250].map(n=>`<button type="button" data-traffic="${n}" class="${n===10?'active':''}">${n} TB</button>`).join('')}</div><div class="label-line"><label class="input-label" for="asia">Audience in Asia & Oceania</label><output id="asia-output" for="asia">50%</output></div><input type="range" id="asia" name="asiaPercent" min="0" max="100" step="1" value="50"><div class="range-labels"><span>0%</span><span>100%</span></div><p class="input-hint">The remaining traffic is delivered in Europe & North America.</p><label class="input-label" for="requests">Requests</label><div class="unit-input"><input type="number" id="requests" name="requestsMillions" min="0" max="1000000000" step="any" value="10" required><span>million / month</span></div><p class="input-hint">Bunny has no request fees. Confirm request charges with CDN77.</p><div class="calculator-note">${icon('info',16)}<span>1 TB = 1,000 GB. USD, before tax. Expand each estimate for its scope and exclusions.</span></div></form><section class="calculator-results" aria-label="Cost estimates"><div class="results-heading"><h2>Estimated delivery cost</h2><span>3 public plans</span></div><div id="calculator-error" role="alert"></div><div id="calculator-estimates" aria-live="polite">${renderEstimates()}</div><p class="subtle-note">These are delivery estimates, not a complete infrastructure bill. Origin, storage, add-ons, and negotiated discounts can change the total.</p></section></div>`;
 }
 
+function seoulTable() {
+  const statusLabels = { listed: 'Listed', private: 'Private PoP', unconfirmed: 'Unconfirmed' };
+  return `<div class="seoul-table-wrap"><table class="seoul-table">
+    <caption class="sr-only">Seoul CDN locations, product access, and published Korean delivery pricing</caption>
+    <thead><tr><th scope="col">Provider</th><th scope="col">Seoul PoP</th><th scope="col">Product & access</th><th scope="col">Korea pricing</th></tr></thead>
+    <tbody>${seoulProviders.map(record => {
+      const provider = getProvider(record.slug);
+      return `<tr><th scope="row"><a class="provider-identity" href="/providers/${provider.slug}/">${logo(provider)}<strong>${e(provider.name)}</strong></a></th>
+        <td data-label="Seoul PoP"><span class="seoul-status ${e(record.seoulStatus)}">${e(statusLabels[record.seoulStatus])}</span><p>${e(record.locationNote)}</p></td>
+        <td data-label="Product & access"><strong>${e(record.product)}</strong><p>${e(record.planNote)}</p></td>
+        <td data-label="Korea pricing"><strong class="seoul-price">${e(record.pricing)}</strong><p>${e(record.pricingNote)}</p></td></tr>`;
+    }).join('')}</tbody>
+  </table></div>`;
+}
+
+function seoulSources() {
+  const reviewed = new Date(seoulReviewDate + 'T00:00:00Z').toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric', timeZone:'UTC' });
+  return `<details class="provider-references seoul-references"><summary>Sources · checked ${e(reviewed)} ${icon('down',13)}</summary><div class="seoul-source-grid">${seoulProviders.map(record => `<section><h3>${e(getProvider(record.slug).name)}</h3>${record.sources.map(source => external(source.url,e(source.label),'reference-link')).join('')}</section>`).join('')}</div></details>`;
+}
+
 function locations(detail=false) {
-  if(!detail) return `<section class="page-intro"><h1>Closer to your audience<span class="accent">.</span></h1><p>Regional field notes on the networks, pricing, and policies behind delivery.</p></section><a class="location-feature" href="/locations/south-korea/"><div class="location-art"><div class="korea-symbol" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i></div><span class="map-coordinates">37.5665° N &nbsp; 126.9780° E</span></div><div class="location-copy"><div class="eyebrow">REGIONAL FIELD GUIDE · 01</div><h2>South Korea</h2><p>Why a Seoul edge location is the beginning of the conversation. Understand access networks, regional pricing, and what a useful measurement needs to show.</p><span class="text-link">Read the field guide ${icon('arrow',18)}</span></div></a><div class="location-bottom"><h3>Built one region at a time.</h3><p>Each guide needs specific, useful information. Measurement results will appear with their method, vantage point, and collection date.</p><a class="text-link" href="/methodology/">Our evidence standards ${icon('arrow',16)}</a></div>`;
-  return `${breadcrumb('South Korea',{href:'/locations/',text:'Locations'})}<section class="page-intro region-intro"><div class="eyebrow">REGIONAL FIELD GUIDE · 01</div><h1>Content delivery<br>in South Korea<span class="accent">.</span></h1><p>Start with the access network. Then look at the edge.</p></section><div class="detail-layout"><div><section class="editorial-note"><div class="eyebrow"><i class="evidence-dot editorial"></i> THE QUESTION TO ASK</div><p>Does my audience actually reach this provider’s Seoul edge, on the plan I can buy?</p><span>A listed location and an observed delivery path answer different questions.</span></section><section class="detail-section"><h2>Three things worth checking</h2><div class="numbered-notes"><article><span>01</span><div><h3>The plan behind the location</h3><p>Check the exact CDN product and network tier. A provider’s full network map does not establish which locations your plan will use.</p></div></article><article><span>02</span><div><h3>The region on the invoice</h3><p>Look for South Korea in the pricing table. A broad “Asia” rate may not capture country-specific tiers or the charges for requests and cache fill.</p></div></article><article><span>03</span><div><h3>The network your users are on</h3><p>Record the access network, IP version, time period, and observed edge. Keep data-center and residential vantage points identifiable.</p></div></article></div></section><section class="detail-section"><div class="section-heading"><h2>Seoul observation plan</h2>${pill('Not measured yet','amber')}</div><p class="muted">The first study will compare warm-cache delivery from these access networks. No latency or routing result has been collected for this website.</p><div class="observation-table"><div><strong>Access network</strong><strong>Vantage point</strong><strong>Results</strong></div>${['KT','SK Broadband','LG U+'].map(n=>`<div><span>${n}</span><span class="muted">To be established</span><span class="muted">—</span></div>`).join('')}</div><a class="text-link" href="/lab/">See the measurement protocols ${icon('arrow',16)}</a></section></div><aside class="detail-aside"><h3>Have a useful observation?</h3><p>Include your ISP, plan, test conditions, and the date. The context makes it useful.</p>${external('https://github.com/lidarbtc/awesome-cdn/issues/new?title=South+Korea+observation','Contribute a field note','text-link')}</aside></div>`;
+  if(!detail) return `<section class="page-intro"><h1>Closer to your audience<span class="accent">.</span></h1><p>Regional field notes on the networks, pricing, and policies behind delivery.</p></section><a class="location-feature" href="/locations/south-korea/"><div class="location-art"><div class="korea-symbol" aria-hidden="true"><span></span><i></i><i></i><i></i><i></i></div><span class="map-coordinates">37.5665° N &nbsp; 126.9780° E</span></div><div class="location-copy"><div class="eyebrow">REGIONAL FIELD GUIDE · 01</div><h2>South Korea</h2><p>Seoul PoPs, product restrictions, and Korean delivery rates across the ${providers.length} providers in our directory.</p><span class="text-link">Explore Seoul availability ${icon('arrow',18)}</span></div></a><div class="location-bottom"><h3>Built one region at a time.</h3><p>Each guide brings together published locations, product terms, and regional pricing. Sources and review dates stay with the guide.</p><a class="text-link" href="/methodology/">How we review the data ${icon('arrow',16)}</a></div>`;
+  return `${breadcrumb('South Korea',{href:'/locations/',text:'Locations'})}
+    <section class="page-intro region-intro"><h1>CDNs with Seoul PoPs<span class="accent">.</span></h1><p>Seoul availability, plan restrictions, and pricing for delivery in South Korea.</p></section>
+    <section class="seoul-directory" aria-labelledby="seoul-directory-title">
+      <div class="section-heading"><h2 id="seoul-directory-title">Seoul availability</h2><span class="seoul-count">${seoulProviders.length} providers reviewed</span></div>
+      <p class="seoul-intro">Listed locations come from provider documentation. Check the product and plan alongside the location; the edge serving your request can vary.</p>
+      ${seoulTable()}
+      <p class="seoul-table-note">Unconfirmed means current Seoul CDN availability could not be established. Prices retain published currencies and units: Gcore bills in euros; Google uses GiB / TiB. Other quoted prices are in USD.</p>
+    </section>
+    <section class="seoul-notes" aria-labelledby="seoul-notes-title"><h2 id="seoul-notes-title">A few conditions worth knowing</h2><div class="seoul-note-grid">
+      <article><h3>A private Seoul PoP</h3><p>CacheFly marks Seoul as a private PoP. Confirm the access terms for your contract before treating it as part of a standard plan.</p><a class="text-link" href="/providers/cachefly/">CacheFly details ${icon('arrow',14)}</a></article>
+      <article><h3>Korea has its own rate</h3><p>Fastly, BytePlus, and Azure Front Door publish separate Korean rates. Match the country, usage band, and request charges when comparing a bill.</p><a class="text-link" href="/providers/fastly/">Fastly details ${icon('arrow',14)}</a></article>
+      <article><h3>Check the network tier</h3><p>Bunny lists Seoul on Standard, with Asia & Oceania enabled. Volume has a smaller footprint. CloudFront PAYG includes Korea in Price Class 200 and All; Class 100 excludes it.</p><a class="text-link" href="/providers/bunny/">Bunny CDN details ${icon('arrow',14)}</a></article>
+    </div></section>
+    <div class="seoul-measurement-link"><div><h2>Check delivery from your network</h2><p>Record the plan, ISP, responding edge, and cache status. The Lab outlines how we plan to collect comparable samples.</p></div><a class="text-link" href="/lab/#seoul-study">Seoul measurement plan ${icon('arrow',16)}</a></div>
+    ${seoulSources()}`;
 }
 
 function lab() {
   const protocols=[['Edge selection','Where does this request actually land?',['Record the CDN product, plan, and test hostname.','Identify the access ASN, resolver, IP version, and vantage point.','Use documented edge identifiers where available; preserve uncertainty.','Retain a representative route and record meaningful changes.']],['Warm-cache delivery','What happens after the content is cached?',['Use the same object size and cache policy across products.','Confirm a cache hit before including a sample.','Keep connection reuse, protocol, and test timing consistent.','Publish the sample count, failures, and TTFB distribution.']],['Purge propagation','When does an update reach the edge?',['Publish a versioned object, then prime the test edges.','Timestamp the purge request and acknowledgment.','Observe when each edge serves the new version.','Describe the purge API, polling interval, and any uncertainty.']]];
-  return `<section class="page-intro"><div class="eyebrow">NOTES FROM THE WORKBENCH</div><h1>Show your working<span class="accent">.</span></h1><p>Small, reproducible studies of how content delivery behaves.</p></section><div class="lab-status">${icon('flask',20)}<div><strong>The lab is taking shape.</strong><p>These are draft protocols. Measured results will be published when the test infrastructure is ready.</p></div></div><div class="protocol-list">${protocols.map(([title,question,steps],i)=>`<details class="protocol" ${i===0?'open':''}><summary><span class="protocol-number">0${i+1}</span><span><strong>${title}</strong><span>${question}</span></span>${pill('Protocol draft')}${icon('plus',20)}</summary><div class="protocol-body"><ol>${steps.map(s=>`<li>${s}</li>`).join('')}</ol><a class="quiet-link" href="/methodology/">How observations are reported ${icon('arrow',14)}</a></div></details>`).join('')}</div>`;
+  return `<section class="page-intro"><div class="eyebrow">NOTES FROM THE WORKBENCH</div><h1>Show your working<span class="accent">.</span></h1><p>Small, reproducible studies of how content delivery behaves.</p></section><div class="lab-status">${icon('flask',20)}<div><strong>The lab is taking shape.</strong><p>These are draft protocols. Measured results will be published when the test infrastructure is ready.</p></div></div><section class="seoul-study" id="seoul-study" aria-labelledby="seoul-study-title"><div class="section-heading"><h2 id="seoul-study-title">Seoul delivery study</h2>${pill('Planned')}</div><p>Start with one identified residential connection and a small set of CDN plans. Add KT, SK Broadband, and LG U+ connections as measurement points become available, keeping each connection’s results separate.</p><dl class="study-scope"><div><dt>Test content</dt><dd>Serve the same small static file from an origin we control through each CDN. Match the object size, cache policy, and client settings.</dd></div><div><dt>What to collect</dt><dd>Record the responding edge when identifiable, confirm cache HIT status, and collect TTFB samples at several times of day. Keep IPv4 and IPv6 samples separate.</dd></div><div><dt>What to publish</dt><dd>Include the provider and plan, ISP and ASN, connection type, test region, dates, sample count, failures, and median / p95 TTFB. Describe connection reuse and protocol settings with the results.</dd></div><div><dt>Scope of a result</dt><dd>A residential connection and a data-center server represent different access paths. Label each measurement point and preserve uncertainty when an edge cannot be identified.</dd></div></dl><a class="text-link" href="/locations/south-korea/">Seoul locations & plan terms ${icon('arrow',14)}</a></section><div class="protocol-list">${protocols.map(([title,question,steps],i)=>`<details class="protocol" ${i===0?'open':''}><summary><span class="protocol-number">0${i+1}</span><span><strong>${title}</strong><span>${question}</span></span>${pill('Protocol draft')}${icon('plus',20)}</summary><div class="protocol-body"><ol>${steps.map(s=>`<li>${s}</li>`).join('')}</ol><a class="quiet-link" href="/methodology/">How observations are reported ${icon('arrow',14)}</a></div></details>`).join('')}</div>`;
 }
 
 function methodology() {
@@ -103,17 +138,53 @@ export function renderTray(selected = []) {
 export function renderPage(pathname, input = {}) {
   const path=pathname.endsWith('/')?pathname:pathname+'/';
   const state={selected:[], search:'',filter:'all',...input};
-  let content,title,description='An independent field guide to CDN pricing, policies, and practical tradeoffs.',noindex=false;
-  if(path==='/'){title='Find your next edge';content=directory(state);}
-  else if(path.startsWith('/providers/')){const p=getProvider(path.split('/')[2]);if(p){title=p.name;description=p.summary;content=providerDetail(p,state);}}
-  else if(path==='/compare/'){title='Compare CDN providers';content=comparison(state);noindex=true;}
-  else if(path==='/calculator/'){title='CDN cost calculator';content=calculator();noindex=true;}
-  else if(path==='/locations/'){title='Locations';content=locations();}
-  else if(path==='/locations/south-korea/'){title='Content delivery in South Korea';content=locations(true);}
-  else if(path==='/lab/'){title='Lab';content=lab();noindex=true;}
-  else if(path==='/methodology/'){title='Our methodology';content=methodology();}
-  else if(path==='/about/'){title='About';content=about();}
-  else if(path==='/archive/'){title='Archived providers';content=archive();}
-  if(!content){title='Page not found';noindex=true;content='<section class="page-intro"><div class="eyebrow">404</div><h1>A cache miss.</h1><p>That page is not in the guide.</p><a class="button primary" href="/">Back to providers</a></section>';}
-  return {title:title+' — cache.box',description,noindex,body:header(path)+`<main id="main" class="site-main ${path==='/'?'home-main':''}">${content}</main>`+footer()+`<aside class="compare-tray" id="compare-tray" aria-label="Selected providers" ${state.selected.length && path!=='/compare/'?'':'hidden'}>${renderTray(state.selected)}</aside><div class="toast" id="toast" role="status" aria-live="polite" hidden></div>`};
+  let content,title,description,noindex=false;
+  if(path==='/'){
+    title='CDN Comparison: Pricing & Networks';
+    description='Compare CDN pricing, free tiers, network capacity, and delivery policies, with practical notes for developers.';
+    content=directory(state);
+  }
+  else if(path.startsWith('/providers/')){const p=getProvider(path.split('/')[2]);if(p){title=p.name+': Pricing & Network';description=p.summary;content=providerDetail(p,state);}}
+  else if(path==='/compare/'){
+    title='Compare CDN Providers';
+    description='Compare up to three CDNs side by side across prices, free plans, video delivery terms, and network details.';
+    content=comparison(state);noindex=true;
+  }
+  else if(path==='/calculator/'){
+    title='CDN Cost Calculator';
+    description='Estimate monthly Bunny CDN and CDN77 delivery costs from your traffic volume and audience location, with plan minimums and calculation limits.';
+    content=calculator();noindex=true;
+  }
+  else if(path==='/locations/'){
+    title='Regional CDN Guides';
+    description='Regional CDN guides, starting with South Korea. Learn what to check in access networks, pricing, and edge locations.';
+    content=locations();
+  }
+  else if(path==='/locations/south-korea/'){
+    title='CDNs with Seoul PoPs: Plans & Pricing';
+    description='Compare Seoul PoP availability, product restrictions, and Korean delivery rates across 19 CDN providers, with links to the underlying sources.';
+    content=locations(true);
+  }
+  else if(path==='/lab/'){
+    title='CDN Testing Protocols';
+    description='Draft test protocols for CDN edge selection, warm-cache delivery, and purge propagation. Measurement results are not published yet.';
+    content=lab();noindex=true;
+  }
+  else if(path==='/methodology/'){
+    title='How We Review CDN Information';
+    description='How cache.box checks CDN pricing and policies, handles maintainer notes, and calculates delivery estimates.';
+    content=methodology();
+  }
+  else if(path==='/about/'){
+    title='About the CDN Directory';
+    description='cache.box is an independent CDN directory maintained by lidarbtc, with practical provider notes and no paid placements.';
+    content=about();
+  }
+  else if(path==='/archive/'){
+    title='Discontinued CDN Services';
+    description='Announcements and closure details for StackPath, Edgio, and Lumen CDN, including transfers of customer contracts to Akamai.';
+    content=archive();
+  }
+  if(!content){title='Page not found';description='The requested page could not be found. Browse the cache.box directory to explore CDN providers.';noindex=true;content='<section class="page-intro"><div class="eyebrow">404</div><h1>A cache miss.</h1><p>That page is not in the guide.</p><a class="button primary" href="/">Back to providers</a></section>';}
+  return {title:title+' | cache.box',description,noindex,body:header(path)+`<main id="main" class="site-main ${path==='/'?'home-main':''}">${content}</main>`+footer()+`<aside class="compare-tray" id="compare-tray" aria-label="Selected providers" ${state.selected.length && path!=='/compare/'?'':'hidden'}>${renderTray(state.selected)}</aside><div class="toast" id="toast" role="status" aria-live="polite" hidden></div>`};
 }

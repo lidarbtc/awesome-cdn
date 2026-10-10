@@ -1,0 +1,123 @@
+{
+  "checkedAt": "2026-10-10",
+  "records": [
+    {
+      "slug": "byteplus",
+      "seoulStatus": "unconfirmed",
+      "locationNote": "Seoul not confirmed in the official sources reviewed.",
+      "product": "BytePlus CDN",
+      "planNote": "Pay as you go or prepaid savings plans; confirm Seoul access before buying.",
+      "pricing": "$0.088/GB · first 10 TB/month",
+      "pricingNote": "South Korea is Asia Pacific Region 3. Add $0.012/10,000 requests and $0.06/GB from edge to origin; logs cost extra.",
+      "sources": [
+        {
+          "label": "CDN network",
+          "url": "https://www.byteplus.com/en/product/cdn",
+          "fields": ["seoul", "product"],
+          "evidence": "The product page describes CDN PoPs in more than 70 locations and regions, but does not identify Seoul in its readable location information. No official Seoul-specific CDN listing was found in targeted searches."
+        },
+        {
+          "label": "Pricing",
+          "url": "https://docs.byteplus.com/en/docs/byteplus-cdn/docs-pricing",
+          "fields": ["plan", "pricing"],
+          "evidence": "The regional table puts South Korea in Asia Pacific Region 3 at USD 0.088/GB for the first 10 TB/month. Pricing uses the CDN node region and decimal GB. Requests are USD 0.012/10,000; edge-to-origin traffic USD 0.06/GB; batch/streamed logs USD 0.001/0.0015 per 10,000 entries. Pay-as-you-go and prepaid savings plans are offered."
+        }
+      ],
+      "limitations": [
+        "A South Korea billing band does not establish a Seoul PoP or a guaranteed Seoul route.",
+        "Third-party Seoul/Incheon listings were not treated as official confirmation.",
+        "The quoted rate is hourly-settled pay-as-you-go; prepaid packages have different economics."
+      ]
+    },
+    {
+      "slug": "google-cloud-cdn",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul appears in the Cloud CDN cache-location list.",
+      "product": "Cloud CDN",
+      "planNote": "Enable on a global external or classic Application Load Balancer. Media CDN is a separate product.",
+      "pricing": "$0.09/GiB · first 10 TiB/month",
+      "pricingNote": "Asia Pacific standalone delivery rate. Add $0.0075/10,000 lookups, $0.01–0.04/GiB cache fill, and load-balancer charges.",
+      "sources": [
+        {
+          "label": "Cache locations",
+          "url": "https://docs.cloud.google.com/cdn/docs/locations",
+          "fields": ["seoul", "product"],
+          "evidence": "The Cloud CDN-specific Asia Pacific list includes Seoul, South Korea. Google says active PoPs can change without notice and that caching resources are dynamically pooled across the edge network."
+        },
+        {
+          "label": "Cloud CDN setup",
+          "url": "https://docs.cloud.google.com/cdn/docs/overview",
+          "fields": ["plan"],
+          "evidence": "Cloud CDN works with the global external or classic Application Load Balancer. The page distinguishes standalone pricing from the optional Global Front End Enterprise unified pricing tier. Caching occurs outside origin regions and no individual cache response is guaranteed."
+        },
+        {
+          "label": "Pricing",
+          "url": "https://cloud.google.com/cdn/pricing",
+          "fields": ["pricing"],
+          "evidence": "Asia Pacific cache delivery costs USD 0.09/GiB for 0–10 TiB per month. Cache lookups cost USD 0.0075/10,000; fill costs USD 0.01–0.04/GiB. Usage is per project and destination, determined by where traffic leaves Google's network. Applicable load-balancing, storage-operation and external-origin request-transfer costs are additional."
+        }
+      ],
+      "limitations": [
+        "A listed Seoul cache does not guarantee every Korean request uses it.",
+        "GiB/TiB units are binary; do not compare them directly with decimal GB/TB rates.",
+        "Quoted delivery pricing is for cacheable traffic under standalone Cloud CDN pricing, not Media CDN or Global Front End Enterprise."
+      ]
+    },
+    {
+      "slug": "azure-front-door",
+      "seoulStatus": "listed",
+      "locationNote": "Seoul is listed for Front Door Standard and Premium.",
+      "product": "Front Door Standard / Premium",
+      "planNote": "Standard $35/month per profile; Premium $330/month, plus usage.",
+      "pricing": "$0.14/GB · first 10 TB/month",
+      "pricingNote": "Korea has a separate zone. First 250M requests: $0.0181/10,000 Standard or $0.0241 Premium. Edge-to-origin: $0.16/GB.",
+      "sources": [
+        {
+          "label": "Front Door locations",
+          "url": "https://learn.microsoft.com/en-us/azure/frontdoor/edge-locations-by-region",
+          "fields": ["seoul", "product", "plan"],
+          "evidence": "The article explicitly applies to Front Door Standard/Premium, Front Door classic and CDN Standard from Microsoft classic. Seoul, South Korea appears in its Asia PoP list. This is a Front Door location source, not an Azure compute-region list."
+        },
+        {
+          "label": "Pricing",
+          "url": "https://azure.microsoft.com/en-us/pricing/details/frontdoor/",
+          "fields": ["plan", "pricing"],
+          "evidence": "Standard/Premium base fees are USD 35/330 monthly, billed hourly. Zone 8 Korea delivery is USD 0.14/GB for the first 10 TB/month for both plans. For the first 250 million requests, per-10,000 prices are USD 0.0181 Standard and 0.0241 Premium. Korea edge-to-origin transfer is USD 0.16/GB."
+        }
+      ],
+      "limitations": [
+        "Front Door classic has a different price table; the displayed rates apply to Standard/Premium.",
+        "A listed Seoul PoP does not establish the route used by a particular Korean ISP.",
+        "Base fees and optional features are additional to delivery traffic."
+      ]
+    },
+    {
+      "slug": "sucuri",
+      "seoulStatus": "unconfirmed",
+      "locationNote": "Seoul is not identified in the published CDN PoP list reviewed.",
+      "product": "Website Firewall with CDN",
+      "planNote": "CDN is included with Basic and Pro Firewall; Seoul access is unconfirmed.",
+      "pricing": "Basic $9.99/month · one site",
+      "pricingNote": "Pro is $19.98/month. No Korea-specific delivery rate was found in the published plan information.",
+      "sources": [
+        {
+          "label": "CDN locations and routing",
+          "url": "https://docs.sucuri.net/website-firewall/sucuri-cdn/",
+          "fields": ["seoul", "product"],
+          "evidence": "The official CDN guide lists PoP response-header identifiers including Tokyo and Singapore, but no Seoul entry. The guide explains that Anycast selects a network path and may not use the geographically closest data center. The page is dated March 27, 2019; its list is not proof that no newer Seoul location exists."
+        },
+        {
+          "label": "Firewall plans",
+          "url": "https://sucuri.net/website-firewall/",
+          "fields": ["product", "plan", "pricing"],
+          "evidence": "Basic and Pro Firewall are advertised at USD 9.99 and 19.98 per month for one site, with CDN speed enhancement included. This plan page provides no Korea-specific traffic price or Seoul entitlement."
+        }
+      ],
+      "limitations": [
+        "Unconfirmed means no adequate current official Seoul evidence was found, not a claim that Sucuri cannot deliver to Korea.",
+        "The official PoP identifier guide is old; a direct support confirmation would be needed for current Seoul availability.",
+        "This is a website firewall/CDN bundle; heavy media terms and per-plan limits require confirmation."
+      ]
+    }
+  ]
+}

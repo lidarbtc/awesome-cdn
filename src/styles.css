@@ -44,3 +44,76 @@
 .calculator-reference{display:flex;align-items:center;gap:14px!important;justify-content:flex-start!important;padding-top:12px!important}
 .calculator-reference span{font-size:9px}
 .calculator-reference .text-link{margin:0}
+
+/* Regional guides keep location and plan conditions in the same row. */
+.seoul-directory .section-heading{margin-bottom:14px}
+.seoul-count{font-size:11px;color:var(--muted);white-space:nowrap}
+.seoul-intro{max-width:720px;font-size:13px;line-height:1.85;color:#5e6c80;margin-bottom:23px}
+.seoul-table-wrap{border:1px solid var(--line);border-radius:8px;background:var(--paper);overflow:hidden}
+.seoul-table{width:100%;border-collapse:collapse;table-layout:fixed;text-align:left}
+.seoul-table th,.seoul-table td{padding:22px 19px;vertical-align:top;border-bottom:1px solid var(--line)}
+.seoul-table thead th{padding-top:14px;padding-bottom:14px;font-family:var(--mono);font-size:10px;font-weight:450;color:#627087;background:#f5f7fb}
+.seoul-table thead th:nth-child(1){width:19%}
+.seoul-table thead th:nth-child(2){width:18%}
+.seoul-table thead th:nth-child(3){width:31%}
+.seoul-table thead th:nth-child(4){width:32%}
+.seoul-table tbody th{font-weight:500}
+.seoul-table tbody tr:last-child>*{border-bottom:0}
+.seoul-table .provider-identity{gap:10px}
+.seoul-table .provider-identity strong{font-size:13px}
+.seoul-table .provider-identity:hover{color:var(--blue)}
+.seoul-table td>strong{font-size:12px;font-weight:550;line-height:1.6;display:block}
+.seoul-table td>p{font-size:12px;line-height:1.75;color:#5e6c80;margin-top:6px;overflow-wrap:anywhere}
+.seoul-table .seoul-price{font-family:var(--mono);font-size:12px;font-weight:450}
+.seoul-status{font-size:11px;display:inline-flex;align-items:center;gap:7px;line-height:1.8;color:#536580}
+.seoul-status:before{content:'';width:5px;height:5px;border-radius:50%;background:#9ba5b5;flex-shrink:0}
+.seoul-status.listed:before{background:#6483d9}
+.seoul-status.private:before{background:#b18d54}
+.seoul-table-note{font-size:11px;color:#657187;line-height:1.85;margin-top:15px;max-width:800px}
+.seoul-notes{margin-top:52px}
+.seoul-note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin-top:25px}
+.seoul-note-grid article{border-top:1px solid var(--line);padding-top:22px}
+.seoul-note-grid h3{font-size:17px;letter-spacing:-.3px}
+.seoul-note-grid p{font-size:13px;line-height:1.9;color:#5e6c80;margin:14px 0 18px}
+.seoul-measurement-link{margin-top:44px;padding:25px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:30px;justify-content:space-between}
+.seoul-measurement-link h2{font-size:19px}
+.seoul-measurement-link p{font-size:12px;line-height:1.8;color:#5e6c80;margin-top:9px;max-width:630px}
+.seoul-measurement-link>.text-link{flex-shrink:0}
+.seoul-references{margin:24px 0 70px}
+.seoul-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 35px;margin-top:20px}
+.seoul-source-grid h3{font-size:12px;letter-spacing:0;margin-bottom:9px}
+.seoul-source-grid .reference-link{margin-top:5px;font-size:11px}
+.seoul-study{scroll-margin-top:30px;margin:40px 0 45px;padding:28px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+.seoul-study .section-heading{margin-bottom:18px}
+.seoul-study>p{font-size:13px;line-height:1.9;color:#5e6c80;max-width:850px}
+.study-scope{margin:23px 0}
+.study-scope>div{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:17px 0;border-top:1px solid var(--line);font-size:12px;line-height:1.85}
+.study-scope dt{font-weight:550;color:#3f4f68}
+.study-scope dd{margin:0;color:#5e6c80;max-width:750px}
+@media(max-width:1000px) and (min-width:681px){.seoul-table th,.seoul-table td{padding:18px 13px}.seoul-table .provider-identity{flex-direction:column;align-items:flex-start}.seoul-note-grid{gap:23px}.seoul-measurement-link{align-items:flex-start;flex-direction:column;gap:17px}}
+@media(max-width:680px){
+  .seoul-count{font-size:10px}
+  .seoul-directory h2{font-size:20px}
+  .seoul-intro{font-size:12px}
+  .seoul-table,.seoul-table tbody,.seoul-table tr{display:block}
+  .seoul-table thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .seoul-table tbody tr{padding:22px;border-bottom:1px solid var(--line)}
+  .seoul-table tbody tr:last-child{border-bottom:0}
+  .seoul-table tbody th,.seoul-table tbody td{display:block;padding:0;border:0}
+  .seoul-table .provider-identity strong{font-size:15px}
+  .seoul-table .provider-logo{width:30px;height:30px;font-size:11px}
+  .seoul-table tbody td{margin-top:17px}
+  .seoul-table td:before{content:attr(data-label);display:block;font-size:10px;color:#738096;margin-bottom:4px}
+  .seoul-table td>p{font-size:12px;margin-top:4px}
+  .seoul-table td>strong,.seoul-table .seoul-price{font-size:13px}
+  .seoul-table-note{font-size:11px}
+  .seoul-notes{margin-top:35px}
+  .seoul-note-grid{grid-template-columns:1fr;gap:24px;margin-top:20px}
+  .seoul-note-grid p{margin-bottom:13px}
+  .seoul-measurement-link{flex-direction:column;align-items:flex-start;gap:17px;margin-top:30px}
+  .seoul-source-grid{grid-template-columns:1fr;gap:24px}
+  .seoul-references{margin-bottom:45px}
+  .seoul-study{padding:22px;margin:30px 0}
+  .seoul-study h2{font-size:19px}
+  .study-scope>div{grid-template-columns:1fr;gap:7px}
+}

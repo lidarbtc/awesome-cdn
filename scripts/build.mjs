@@ -48,6 +48,7 @@ function documentFor(route, page) {
   <meta property="og:url" content="${canonical}">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script defer src="https://m.lidar.blog/script.js" data-website-id="72d867af-35ec-4538-9e33-aa9154e71a61"></script>
   <script type="module" src="/assets/app.js"></script>
 </head>
 <body>
